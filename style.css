@@ -1,0 +1,227 @@
+/* FONT OPZIONALE: Importa un font per lo stile cyber */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* ================================================= */
+/* VARIABILI DI COLORE (Utili per modifiche future)  */
+/* ================================================= */
+:root {
+    --accent-color: #bf00ff; /* Viola Elettrico per gli accenti neon */
+    --accent-shadow: rgba(191, 0, 255, 0.7);
+    --dark-bg: #1a1a1a; /* Sfondo principale */
+    --dark-header-bg: #260033; /* Viola molto scuro per l'intestazione */
+    --gold: #ffcc00; /* Giallo Oro per il titolo e i punti salienti */
+}
+
+/* ================================================= */
+/* STILE BASE CYBER / STEAMPUNK                      */
+/* ================================================= */
+
+body {
+    font-family: 'Orbitron', Arial, sans-serif; 
+    background-color: var(--dark-bg); 
+    color: #c9c9c9; /* Testo chiaro */
+    margin: 0;
+    padding: 20px;
+    /* Sfondo scuro con un leggero accento viola */
+    background-image: 
+        radial-gradient(circle, rgba(20, 0, 30, 0.8) 0%, rgba(26, 26, 26, 0.9) 70%), 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect x="0" y="0" width="100" height="100" fill="%231a1a1a"/><path fill="%23303030" d="M100 0L0 100V0z"/></svg>'); 
+    background-size: cover, 10px 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    /* Effetto neon viola */
+    border: 3px solid var(--accent-color); 
+    box-shadow: 0 0 15px var(--accent-color);
+    border-radius: 50%; 
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--gold); 
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.8); /* Glow dorato */
+    margin-top: 10px;
+}
+
+.descrizione-regole {
+    max-width: 600px;
+    margin: 15px auto 0;
+    font-size: 1em;
+    color: #aaaaaa;
+    line-height: 1.5;
+    padding: 10px;
+    border: 1px dashed #444; 
+}
+.descrizione-regole strong {
+    color: var(--accent-color); /* Testo viola acceso per le parole chiave */
+}
+
+/* ================================================= */
+/* STILE PODIO SCENICO                               */
+/* ================================================= */
+
+.sezione-titolo {
+    text-align: center;
+    color: var(--gold); 
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+    border-bottom: 2px solid var(--accent-color); /* Bordo viola */
+    width: fit-content;
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#podio-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-end; 
+    height: 350px; 
+    margin: 40px auto 70px;
+    width: 90%;
+    max-width: 800px;
+}
+
+.podio-blocco {
+    width: 30%;
+    text-align: center;
+    padding-top: 10px;
+    position: relative;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+}
+
+/* Gradini del podio - Colori classici */
+.second-place-podio {
+    height: 60%; 
+    background: linear-gradient(to top, #7f8c8d, #34495e); /* Argento scuro */
+    margin-right: 20px;
+    top: 50px;
+}
+
+.first-place-podio {
+    height: 90%; 
+    background: linear-gradient(to top, #ffd700, #b8860b); /* Oro */
+    margin: 0 20px;
+    top: 0;
+}
+
+.third-place-podio {
+    height: 40%; 
+    background: linear-gradient(to top, #cd7f32, #6a3e07); /* Bronzo */
+    margin-left: 20px;
+    top: 100px;
+}
+
+.podio-info {
+    position: absolute;
+    top: -100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.podio-info h3 {
+    margin: 5px 0;
+    font-size: 1.3em;
+    color: white;
+    text-shadow: 0 0 5px var(--accent-color); /* Ombra viola */
+    letter-spacing: 1px;
+}
+
+.carta-preferita {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    border: 5px solid var(--accent-color); /* Bordo viola */
+    border-radius: 5px;
+    box-shadow: 0 0 15px var(--accent-shadow); /* Ombra viola */
+}
+
+.numero-posizione {
+    font-size: 3em;
+    font-weight: bold;
+    color: #1a1a1a;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.4);
+}
+.first-place-podio .numero-posizione { color: #8b4513; }
+
+/* ================================================= */
+/* STILE TABELLA CLASSIFICA                          */
+/* ================================================= */
+
+table {
+    width: 95%;
+    max-width: 1000px; 
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(191, 0, 255, 0.2); /* Ombra tabella viola */
+    background-color: #242424; 
+    border-radius: 0; 
+    border: 2px solid #555; 
+}
+
+thead th {
+    background-color: var(--dark-header-bg); /* Viola molto scuro */
+    color: var(--gold); 
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--accent-color); /* Bordo viola */
+}
+
+th.sortable {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+th.sortable:hover {
+    color: var(--accent-color); /* Highlight viola al passaggio del mouse */
+}
+
+tbody td {
+    border: 1px solid #3d3d3d; 
+    padding: 12px 10px;
+    text-align: center;
+    color: #c9c9c9;
+}
+
+tbody td:nth-child(2) {
+    text-align: left;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #2c2c2c;
+}
+
+tbody tr:hover {
+    background-color: #383838;
+    box-shadow: inset 0 0 10px rgba(191, 0, 255, 0.3); /* Leggero glow viola */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Stile speciale per i primi 3 anche nella lista */
+tr.first-place {
+    background-color: #4a3c00 !important; /* Oro scuro di base */
+    font-weight: bold;
+}
+tr.first-place td {
+    color: #ffd700 !important; 
+    text-shadow: 0 0 3px rgba(255, 215, 0, 0.5);
+}
