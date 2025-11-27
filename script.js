@@ -19,7 +19,7 @@ const contendenti = [
     // UTH: 0 vittorie e 0 sconfitte, carta ora presente
     { nome: "UTH", vittorie: 0, sconfitte: 0, cartaPreferita: "https://imgur.com/2IXxycV.png" },
     { nome: "Bomberman", vittorie: 0, sconfitte: 0, cartaPreferita: segnapostoCarta },
-    { nome: "Castlegnu", vittorie: 0, sconfitte: 0, cartaPreferita: "https://m.media-amazon.com/images/I/71pOTYKXjhL.jpg" }
+    { nome: "Lepreviverna", vittorie: 0, sconfitte: 0, cartaPreferita: "https://m.media-amazon.com/images/I/71pOTYKXjhL.jpg" }
 ];
 
 let ordinamentoCorrente = 'percentuale'; // Chiave predefinita: ordina per Percentuale Vittorie
@@ -157,3 +157,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
