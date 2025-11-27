@@ -14,11 +14,12 @@ const contendenti = [
     
     // Gli altri contendenti (0-0) usano il segnaposto finché non li aggiorni
     { nome: "Marco", vittorie: 0, sconfitte: 0, cartaPreferita: segnapostoCarta },
-    { nome: "Powerox", vittorie: 0, sconfitte: 0, cartaPreferita: segnapostoCarta },
+    { nome: "Powerox", vittorie: 0, sconfitte: 0, cartaPreferita: "https://ygomjson.untapped.gg/art/full/en-us/512/crv/1546123.webp" },
     { nome: "Carmine", vittorie: 0, sconfitte: 0, cartaPreferita: segnapostoCarta },
     // UTH: 0 vittorie e 0 sconfitte, carta ora presente
     { nome: "UTH", vittorie: 0, sconfitte: 0, cartaPreferita: "https://imgur.com/2IXxycV.png" },
     { nome: "Bomberman", vittorie: 0, sconfitte: 0, cartaPreferita: segnapostoCarta },
+    { nome: "Castlegnu", vittorie: 0, sconfitte: 0, cartaPreferita: "https://m.media-amazon.com/images/I/71pOTYKXjhL.jpg" }
 ];
 
 let ordinamentoCorrente = 'percentuale'; // Chiave predefinita: ordina per Percentuale Vittorie
@@ -154,4 +155,5 @@ document.addEventListener('DOMContentLoaded', () => {
             th.addEventListener('click', () => ordinaPer(chiave));
         }
     });
+
 });
