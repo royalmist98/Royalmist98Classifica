@@ -13,7 +13,7 @@ const contendenti = [
     { nome: "Macro", vittorie: 4, sconfitte: 2, cartaPreferita: "https://i.imgur.com/vo34BeT.png" },
     
     // Gli altri contendenti (0-0) usano il segnaposto finché non li aggiorni
-    { nome: "Marco", vittorie: 0, sconfitte: 0, cartaPreferita: segnapostoCarta },
+    { nome: "Marcuzzo", vittorie: 0, sconfitte: 0, cartaPreferita: "https://www.magicianscircle.it/wp-content/uploads/2021/06/71qvnDNE-rL._AC_SY550_.jpg" },
     { nome: "Powerox", vittorie: 0, sconfitte: 0, cartaPreferita: "https://ygomjson.untapped.gg/art/full/en-us/512/crv/1546123.webp" },
     { nome: "Carmine", vittorie: 0, sconfitte: 0, cartaPreferita: segnapostoCarta },
     // UTH: 0 vittorie e 0 sconfitte, carta ora presente
@@ -157,4 +157,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
 
