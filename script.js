@@ -14,7 +14,7 @@ const contendenti = [
     
     // Gli altri contendenti (0-0) usano il segnaposto finché non li aggiorni
     { nome: "VinMarco", vittorie: 2, sconfitte: 8, cartaPreferita: "https://www.magicianscircle.it/wp-content/uploads/2021/06/71qvnDNE-rL._AC_SY550_.jpg" },
-    { nome: "Powerox", vittorie: 0, sconfitte: 0, cartaPreferita: "https://ygomjson.untapped.gg/art/full/en-us/512/crv/1546123.webp" },
+    { nome: "Powerox", vittorie: 8, sconfitte: 2, cartaPreferita: "https://www.cardtrader.com/uploads/blueprints/image/80097/show_cyber-end-dragon-ultimate-rare-cybernetic-revolution.jpg" },
     { nome: "Carmine", vittorie: 0, sconfitte: 0, cartaPreferita: segnapostoCarta },
     // UTH: 0 vittorie e 0 sconfitte, carta ora presente
     { nome: "UTH", vittorie: 0, sconfitte: 0, cartaPreferita: "https://imgur.com/2IXxycV.png" },
@@ -157,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
 
 
 
