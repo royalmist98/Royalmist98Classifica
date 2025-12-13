@@ -13,7 +13,7 @@
 }
 
 /* ================================================= */
-/* STILE BASE CYBER / STEAMPUNK - NUOVO SFONDO IMMAGINE */
+/* STILE BASE CYBER / STEAMPUNK - SFONDO MOBILE DEFAULT */
 /* ================================================= */
 
 body {
@@ -23,11 +23,21 @@ body {
     margin: 0;
     padding: 20px;
     
-    /* NUOVO SFONDO IMMAGINE */
+    /* SFONDO PREDEFINITO (Mobile e Schermi Piccoli) */
     background-image: url('https://i.imgur.com/X2gqBaB.jpeg');
     background-size: cover; /* Assicura che l'immagine copra sempre l'intero schermo */
     background-attachment: fixed; /* Mantiene lo sfondo fisso mentre si scorre la classifica */
     background-position: center center; /* Centra l'immagine */
+}
+
+/* ================================================= */
+/* MEDIA QUERY: SFONDO PC (Schermi di 1000px o più larghi) */
+/* ================================================= */
+@media (min-width: 1000px) {
+    body {
+        /* Sovrascrive lo sfondo di default con l'immagine HD per i PC */
+        background-image: url('https://static.wikia.nocookie.net/yugioh/images/8/80/BlackLusterRitual-TF04-JP-VG.jpg/revision/latest?cb=20120905173644&path-prefix=it');
+    }
 }
 
 header {
