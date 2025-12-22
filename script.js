@@ -6,17 +6,11 @@
 const segnapostoCarta = "https://i.imgur.com/u5jS5xU.png"; 
 
 const contendenti = [
-    // Star: 8 vittorie e 2 sconfitte
     { nome: "Star", vittorie: 8, sconfitte: 2, cartaPreferita: "https://i.imgur.com/TbiFjV5.png" },
-    
-    // Macro: 4 vittorie e 2 sconfitte
-    { nome: "Macro", vittorie: 4, sconfitte: 2, cartaPreferita: "https://i.imgur.com/vo34BeT.png" },
-    
-    // Gli altri contendenti (0-0) usano il segnaposto finché non li aggiorni
+    { nome: "Macro", vittorie: 7, sconfitte: 3, cartaPreferita: "https://i.imgur.com/vo34BeT.png" },
     { nome: "VinMarco", vittorie: 2, sconfitte: 8, cartaPreferita: "https://www.magicianscircle.it/wp-content/uploads/2021/06/71qvnDNE-rL._AC_SY550_.jpg" },
     { nome: "Powerox", vittorie: 8, sconfitte: 2, cartaPreferita: "https://www.cardtrader.com/uploads/blueprints/image/80097/show_cyber-end-dragon-ultimate-rare-cybernetic-revolution.jpg" },
     { nome: "Carmine", vittorie: 0, sconfitte: 0, cartaPreferita: segnapostoCarta },
-    // UTH: 0 vittorie e 0 sconfitte, carta ora presente
     { nome: "UTH", vittorie: 0, sconfitte: 0, cartaPreferita: "https://imgur.com/2IXxycV.png" },
     { nome: "Bomberman", vittorie: 0, sconfitte: 0, cartaPreferita: segnapostoCarta },
     { nome: "Lepreviverna", vittorie: 0, sconfitte: 0, cartaPreferita: "https://m.media-amazon.com/images/I/71pOTYKXjhL.jpg" }
@@ -157,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
 
 
 
