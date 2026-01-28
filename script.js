@@ -10,7 +10,7 @@ const contendenti = [
     { nome: "Macro", vittorie: 7, sconfitte: 3, cartaPreferita: "https://i.imgur.com/vo34BeT.png" },
     { nome: "VinMarco", vittorie: 2, sconfitte: 8, cartaPreferita: "https://www.magicianscircle.it/wp-content/uploads/2021/06/71qvnDNE-rL._AC_SY550_.jpg" },
     { nome: "Powerox", vittorie: 8, sconfitte: 2, cartaPreferita: "https://www.cardtrader.com/uploads/blueprints/image/80097/show_cyber-end-dragon-ultimate-rare-cybernetic-revolution.jpg" },
-    { nome: "Carmine", vittorie: 0, sconfitte: 0, cartaPreferita: segnapostoCarta },
+    { nome: "Il Leone di Vibo", vittorie: 0, sconfitte: 0, cartaPreferita: segnapostoCarta },
     { nome: "UTH", vittorie: 0, sconfitte: 0, cartaPreferita: "https://imgur.com/2IXxycV.png" },
     { nome: "Bomberman", vittorie: 0, sconfitte: 0, cartaPreferita: segnapostoCarta },
     { nome: "Lepreviverna", vittorie: 0, sconfitte: 0, cartaPreferita: "https://m.media-amazon.com/images/I/71pOTYKXjhL.jpg" }
@@ -151,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
 
 
 
