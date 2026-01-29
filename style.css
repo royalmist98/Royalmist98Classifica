@@ -235,4 +235,7 @@ footer {
     text-shadow: 0 0 10px var(--accent-shadow);
 }
 
+.podio-blocco .numero-posizione {
+    display: none !important;
+}
 
