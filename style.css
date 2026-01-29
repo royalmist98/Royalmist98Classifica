@@ -64,7 +64,7 @@ h1 {
     display: block;
     max-width: 800px;
     width: 90%;
-    margin: 30px auto 60px auto; /* Ampio margine inferiore per non toccare il podio */
+    margin: 30px auto 100px auto; 
     padding: 25px;
     background: rgba(15, 0, 30, 0.9);
     border: 1px solid var(--accent-color);
@@ -74,6 +74,7 @@ h1 {
     text-align: center;
     position: relative;
     box-sizing: border-box;
+    clear: both; 
 }
 
 .info-box p {
@@ -173,9 +174,11 @@ h1 {
     justify-content: center;
     align-items: flex-end;
     height: 380px;
-    margin: 50px auto 100px;
+    margin: 80px auto 100px; 
     width: 95%;
     max-width: 900px;
+    position: relative;
+    padding-top: 50px; 
 }
 
 .podio-blocco {
@@ -227,3 +230,4 @@ footer {
     letter-spacing: 4px;
     text-shadow: 0 0 10px var(--accent-shadow);
 }
+
