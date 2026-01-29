@@ -241,3 +241,85 @@ tr.first-place td {
     color: #ffd700 !important; 
     text-shadow: 0 0 3px rgba(255, 215, 0, 0.5);
 }
+
+/* ================================================= */
+/* STILE PER LA HOME PAGE (HUB)                      */
+/* ================================================= */
+
+#hub-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 60px auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.hub-card {
+    background-color: rgba(0, 0, 0, 0.85); /* Molto scuro per risaltare sullo sfondo di Yu-Gi-Oh */
+    border: 3px solid var(--accent-color);
+    border-radius: 20px;
+    padding: 50px 30px;
+    width: 320px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 0 20px var(--accent-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hub-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px var(--accent-color);
+    background-color: var(--dark-header-bg);
+    border-color: var(--gold);
+}
+
+.hub-icon {
+    font-size: 5em;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px var(--accent-color));
+}
+
+.hub-card h2 {
+    color: var(--gold);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hub-card p {
+    color: #ccc;
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.btn-enter {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hub-card:hover .btn-enter {
+    background: var(--gold);
+    color: black;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: var(--accent-color);
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 3px;
+}
