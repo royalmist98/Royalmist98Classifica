@@ -213,3 +213,43 @@ footer {
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 3px;
 }
+
+.info-box {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(15, 0, 30, 0.85); /* Sfondo scurissimo */
+    border: 1px solid var(--accent-color);
+    border-left: 5px solid var(--gold);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(191, 0, 255, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+.info-box p {
+    color: #e0e0e0;
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.info-box strong {
+    color: var(--gold);
+    text-shadow: 0 0 5px rgba(255, 204, 0, 0.4);
+}
+
+.info-box::before {
+    content: "SYSTEM MESSAGE";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: #1a1a1a; /* Colore di sfondo scuro */
+    padding: 0 10px;
+    font-size: 0.65em;
+    color: var(--accent-color);
+    font-weight: bold;
+    border: 1px solid var(--accent-color);
+}
