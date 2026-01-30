@@ -255,25 +255,22 @@ footer {
 /* ================================================= */
 
 .torneo-fase {
-    background: rgba(20, 0, 40, 0.6);
-    border: 1px solid rgba(191, 0, 255, 0.4);
+    background: rgba(20, 0, 40, 0.7);
+    border: 1px solid var(--accent-color);
     border-radius: 15px;
-    padding: 25px;
-    margin: 40px auto;
-    max-width: 1000px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 1100px;
+    clear: both;
 }
 
 .titolo-fase {
     color: var(--gold);
     text-align: center;
-    font-size: 1.4em;
-    margin-bottom: 30px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    border-bottom: 2px solid var(--accent-color);
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
+    border-bottom: 1px solid var(--accent-color);
     padding-bottom: 5px;
 }
 
@@ -288,55 +285,50 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
+    margin: 10px;
 }
 
 .slot-torneo {
-    background: rgba(10, 10, 10, 0.9);
+    background: #000;
     border: 1px solid var(--accent-color);
-    border-radius: 8px;
-    padding: 15px;
-    width: 200px; /* Leggermente più stretto per farli stare affiancati */
+    border-radius: 5px;
+    padding: 10px;
+    width: 180px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(191, 0, 255, 0.2);
 }
 
 .slot-torneo strong {
     color: var(--gold) !important;
-    font-size: 1.1em;
-    text-shadow: 0 0 8px rgba(255, 204, 0, 0.5);
+    text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
     display: block;
 }
 
+.slot-torneo small {
+    color: #ccc;
+    font-size: 0.8em;
+}
+
 .slot-attesa {
-    border: 1px dashed #777;
-    opacity: 0.7;
+    border: 1px dashed #555;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .vs {
-    font-weight: bold;
     color: var(--gold);
-    font-size: 1em;
+    font-weight: bold;
+    font-size: 0.9em;
 }
 
 .info-match {
     text-align: center;
-    font-size: 0.9em;
-    color: #aaa;
-    margin-top: 15px;
-    font-style: italic;
+    color: #888;
+    font-size: 0.8em;
+    margin-top: 10px;
 }
 
-/* Adattamento per Cellulare */
-@media (max-width: 700px) {
-    .matchup {
-        flex-direction: column;
-        gap: 5px;
-    }
-    .vs {
-        margin: 5px 0;
-    }
-    .slot-torneo {
-        width: 250px;
-    }
+/* Fix Mobile */
+@media (max-width: 600px) {
+    .matchup { flex-direction: column; }
+    .slot-torneo { width: 220px; }
 }
