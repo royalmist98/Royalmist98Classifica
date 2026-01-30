@@ -1,107 +1,76 @@
 /* ================================================= */
-/* 1. FONT E VARIABILI GLOBALI                       */
+/* 1. VARIABILI E SETUP                              */
 /* ================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 :root {
     --accent-color: #bf00ff; /* Viola Neon */
-    --accent-shadow: rgba(191, 0, 255, 0.7);
-    --dark-bg: #1a1a1a;
-    --dark-header-bg: #260033;
-    --gold: #ffcc00; /* Oro Yu-Gi-Oh */
+    --gold: #ffcc00;         /* Oro Yu-Gi-Oh */
+    --dark-bg: rgba(10, 10, 10, 0.9);
 }
 
 /* ================================================= */
-/* 2. BACKGROUND E BODY (ADATTIVO)                   */
+/* 2. SFONDI DIFFERENZIATI (PC vs MOBILE)            */
 /* ================================================= */
 body {
-    font-family: 'Orbitron', Arial, sans-serif;
-    background-color: #000000;
-    color: #c9c9c9;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000;
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
-    background-image: url('https://i.imgur.com/X2gqBaB.jpeg'); /* MOBILE */
+    /* 📱 SFONDO MOBILE */
+    background-image: url('https://i.imgur.com/X2gqBaB.jpeg');
     background-size: cover;
     background-attachment: fixed;
-    background-position: center center;
+    background-position: center;
 }
 
 @media (min-width: 1000px) {
     body {
-        background-image: url('https://i.imgur.com/2ameBIR.jpeg'); /* PC */
-    }
-}
-
-.info-box {
-        margin-bottom: 120px !important; 
+        /* 💻 SFONDO PC */
+        background-image: url('https://i.imgur.com/2ameBIR.jpeg');
     }
 }
 
 /* ================================================= */
-/* 3. HEADER E LOGO                                  */
-/* ================================================= */
-header {
-    text-align: center;
-    padding: 40px 20px 20px 20px;
-}
-
-.logo {
-    max-width: 120px;
-    height: auto;
-    border: 3px solid var(--accent-color);
-    box-shadow: 0 0 20px var(--accent-color);
-    border-radius: 50%;
-    margin-bottom: 15px;
-    background: rgba(0, 0, 0, 0.6);
-}
-
-h1 {
-    font-size: 2.5em;
-    color: var(--gold);
-    text-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
-    margin: 10px 0;
-}
-
-/* ================================================= */
-/* 4. BOX INFORMATIVI (RIQUADRI MESSAGGI)            */
+/* 3. INFO-BOX (RETTANGOLI MESSAGGI)                 */
 /* ================================================= */
 .info-box {
-    display: block;
+    display: block !important;
     max-width: 800px;
     width: 90%;
-    margin: 30px auto 100px auto; 
+    margin: 40px auto 60px auto; 
     padding: 25px;
-    background: rgba(15, 0, 30, 0.9);
-    border: 1px solid var(--accent-color);
-    border-left: 5px solid var(--gold);
+    background: rgba(15, 0, 30, 0.9) !important;
+    border: 1px solid var(--accent-color) !important;
+    border-left: 5px solid var(--gold) !important;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(191, 0, 255, 0.4);
     text-align: center;
     position: relative;
     box-sizing: border-box;
-    clear: both; 
+    clear: both;
 }
 
 .info-box p {
-    color: #e0e0e0;
-    font-size: 0.95em;
-    line-height: 1.7;
+    color: #ffffff !important;
     margin: 0;
-    text-shadow: 1px 1px 2px black;
+    line-height: 1.6;
+    font-size: 1em;
+    text-shadow: 1px 1px 3px #000;
 }
 
 .info-box strong {
     color: var(--gold);
 }
 
-/* Etichetta System Message sopra il box */
 .info-box::before {
     content: "SYSTEM MESSAGE";
     position: absolute;
     top: -12px;
     left: 20px;
     background: #000;
-    padding: 0 12px;
+    padding: 0 10px;
     font-size: 0.7em;
     color: var(--accent-color);
     font-weight: bold;
@@ -109,96 +78,123 @@ h1 {
 }
 
 /* ================================================= */
-/* 5. HUB - HOME PAGE (CARDS)                        */
+/* 4. HEADER E LOGO                                  */
+/* ================================================= */
+header {
+    text-align: center;
+    padding: 40px 20px 10px 20px;
+}
+
+.logo {
+    max-width: 120px;
+    border: 3px solid var(--accent-color);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--accent-color);
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: var(--gold);
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+    margin: 5px 0;
+}
+
+/* ================================================= */
+/* 5. HUB (INDEX PAGE)                               */
 /* ================================================= */
 #hub-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
-    margin: 20px auto 80px;
+    margin: 40px auto;
     max-width: 1100px;
-    padding: 20px;
 }
 
 .hub-card {
-    background: linear-gradient(145deg, rgba(30, 0, 50, 0.9), rgba(0, 0, 0, 0.95));
+    background: rgba(20, 0, 40, 0.85);
     border: 2px solid var(--accent-color);
-    border-radius: 20px;
-    padding: 50px 30px;
-    width: 300px;
-    text-align: center;
+    padding: 40px 20px;
+    border-radius: 15px;
     text-decoration: none;
     color: white;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    box-shadow: 0 0 20px var(--accent-shadow);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 280px;
+    text-align: center;
+    transition: 0.3s;
 }
 
 .hub-card:hover {
     transform: translateY(-10px);
     border-color: var(--gold);
-    box-shadow: 0 0 40px var(--accent-color);
+    box-shadow: 0 0 25px var(--accent-color);
 }
 
-.hub-icon {
-    font-size: 5em;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 0 10px var(--accent-color));
-}
-
-.btn-enter {
-    margin-top: 20px;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    padding: 10px 25px;
-    border-radius: 5px;
-    font-weight: bold;
-}
+.hub-icon { font-size: 4em; display: block; margin-bottom: 15px; }
 
 /* ================================================= */
-/* 6. CLASSIFICA - PODIO                             */
+/* 6. PODIO (CLASSIFICA PAGE)                        */
 /* ================================================= */
 .sezione-titolo {
     text-align: center;
     color: var(--gold);
-    margin: 40px auto 20px;
-    font-size: 1.8em;
-    border-bottom: 2px solid var(--accent-color);
-    width: fit-content;
-    padding: 5px 20px;
-    background: rgba(0, 0, 0, 0.7);
+    margin-top: 50px;
 }
 
 #podio-container {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 380px;
-    margin: 80px auto 100px; 
+    height: 400px;
+    margin: 150px auto 50px; /* Margine alto per le carte */
     width: 95%;
     max-width: 900px;
-    position: relative;
-    padding-top: 50px; 
+}
+
+/* Correzione specifica per PC: abbassa il podio ancora di più */
+@media (min-width: 1000px) {
+    #podio-container {
+        margin-top: 200px !important;
+    }
 }
 
 .podio-blocco {
     width: 30%;
     position: relative;
     border-radius: 8px 8px 0 0;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.9);
 }
 
-.second-place-podio { height: 60%; background: linear-gradient(to top, #7f8c8d, #2c3e50); margin-right: 15px; }
-.first-place-podio { height: 95%; background: linear-gradient(to top, #ffd700, #9a7b0c); margin: 0 15px; }
-.third-place-podio { height: 40%; background: linear-gradient(to top, #cd7f32, #7d4608); margin-left: 15px; }
+.first-place-podio { height: 100%; background: linear-gradient(to top, #ffd700, #9a7b0c); margin: 0 10px; }
+.second-place-podio { height: 70%; background: linear-gradient(to top, #c0c0c0, #708090); margin-right: 10px; }
+.third-place-podio { height: 45%; background: linear-gradient(to top, #cd7f32, #8b4513); margin-left: 10px; }
 
-.podio-info { position: absolute; top: -130px; left: 50%; transform: translateX(-50%); width: 110px; }
-.carta-preferita { width: 100%; border: 3px solid var(--accent-color); border-radius: 5px; box-shadow: 0 0 15px var(--accent-shadow); }
+.podio-info {
+    position: absolute;
+    top: -150px; /* Spazio per la carta */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    text-align: center;
+}
+
+.carta-preferita {
+    width: 100%;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+.nome-duellante {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* Nasconde i numeri 1, 2, 3 */
+.numero-posizione {
+    display: none !important;
+}
 
 /* ================================================= */
 /* 7. TABELLA CLASSIFICA                             */
@@ -206,23 +202,23 @@ h1 {
 table {
     width: 95%;
     max-width: 1000px;
-    margin: 0 auto 100px;
+    margin: 50px auto 100px;
     border-collapse: collapse;
-    background: rgba(20, 20, 20, 0.95);
-    border: 2px solid #444;
+    background: rgba(10, 10, 10, 0.9);
+    border: 1px solid #444;
 }
 
-thead th {
-    background: var(--dark-header-bg);
+th {
+    background: var(--dark-bg);
     color: var(--gold);
-    padding: 18px;
-    border-bottom: 3px solid var(--accent-color);
+    padding: 15px;
+    border-bottom: 2px solid var(--accent-color);
 }
 
-tbody td {
-    padding: 15px;
+td {
+    padding: 12px;
     text-align: center;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #222;
 }
 
 /* ================================================= */
@@ -230,14 +226,7 @@ tbody td {
 /* ================================================= */
 footer {
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px;
+    font-size: 0.8em;
     color: var(--accent-color);
-    letter-spacing: 4px;
-    text-shadow: 0 0 10px var(--accent-shadow);
 }
-
-.podio-blocco .numero-posizione {
-    display: none !important;
-}
-
-
