@@ -250,14 +250,13 @@ footer {
     color: #ffffff !important;
 }
 
-/* --- BRACKET PIRAMIDALE --- */
-.bracket-wrapper {
+/* --- BRACKET VERTICALE PULITO --- */
+.vertical-bracket {
     display: flex;
-    flex-direction: column-reverse; /* Dal basso verso l'alto */
+    flex-direction: column-reverse; /* Forza l'ordine dal basso verso l'alto */
     align-items: center;
-    padding: 40px 10px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 40px;
+    padding: 20px;
 }
 
 .tier {
@@ -265,62 +264,42 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 40px 0;
-    position: relative;
 }
 
-.label-tier {
+.tier-label {
     color: var(--gold);
     font-size: 0.7em;
-    font-weight: bold;
     letter-spacing: 2px;
-    margin-top: 15px;
-    opacity: 0.8;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 5px;
 }
 
 .group-row {
     display: flex;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
-    width: 100%;
+    gap: 20px;
 }
 
 .matchup-row {
-    background: rgba(20, 0, 40, 0.9);
-    border: 2px solid var(--accent-color);
-    border-radius: 10px;
+    background: rgba(15, 0, 30, 0.9);
+    border: 1px solid var(--accent-color);
     padding: 10px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     min-width: 220px;
-    z-index: 2;
 }
 
-/* --- LOGICA DELLE LINEE (COME IMMAGINE) --- */
-.connector-line::after {
-    content: "";
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    width: 2px;
-    height: 40px;
-    background: var(--accent-color);
+/* Evidenzia il match di Star */
+.highlight-star {
+    border: 2px solid var(--gold);
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
 }
 
-.connector-line-double::after {
-    content: "";
-    position: absolute;
-    bottom: -40px;
-    left: 25%;
-    right: 25%;
-    height: 40px;
-    border: 2px solid var(--accent-color);
-    border-top: none;
-}
-
-/* --- STILE SLOT --- */
 .slot {
     background: #000;
     padding: 8px;
@@ -331,30 +310,34 @@ footer {
 
 .slot strong {
     color: var(--gold) !important;
-    font-size: 0.85em;
-    text-shadow: 0 0 5px #000;
+    font-size: 0.9em;
+    text-transform: uppercase;
 }
 
-.vs-mini { color: var(--gold); font-weight: bold; font-size: 0.7em; }
-
-/* Speciale per il vincitore */
-.winner-container {
-    padding: 20px;
-    transform: scale(1.3);
+.vs-mini {
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 0.7em;
 }
 
 .winner-slot {
     border: 2px solid var(--gold) !important;
     box-shadow: 0 0 20px var(--gold);
+    padding: 15px;
+    transform: scale(1.1);
 }
 
-.crown { font-size: 2em; margin-bottom: 5px; text-align: center; }
+.winner-text {
+    color: var(--gold);
+    font-size: 0.7em;
+    margin-top: 10px;
+    font-weight: bold;
+}
 
-.highlight-match { border-color: var(--gold); }
+.crown { font-size: 2.5em; text-align: center; }
 
 /* Mobile */
-@media (max-width: 800px) {
-    .group-row { flex-direction: column; align-items: center; }
-    .connector-line, .connector-line-double { border: none; }
-    .connector-line::after, .connector-line-double::after { display: none; }
+@media (max-width: 768px) {
+    .group-row { flex-direction: column; }
+    .matchup-row { width: 90%; }
 }
