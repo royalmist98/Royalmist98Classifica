@@ -250,7 +250,7 @@ footer {
     color: #ffffff !important;
 }
 
-/* --- LAYOUT TORNEO DEFINITIVO --- */
+/* --- LAYOUT TORNEO --- */
 .bracket-container {
     display: flex;
     justify-content: space-evenly;
@@ -265,13 +265,12 @@ footer {
 .bracket-column {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Mantiene i match centrati verticalmente */
+    justify-content: center;
     gap: 40px;
     min-width: 280px;
-    height: 600px; /* Altezza fissa per aiutare l'allineamento */
+    height: 600px;
 }
 
-/* Titoli in ORO */
 .column-title {
     color: var(--gold);
     font-size: 0.9em;
@@ -282,7 +281,6 @@ footer {
     text-shadow: 0 0 10px rgba(255, 204, 0, 0.4);
 }
 
-/* Bordi VIOLA NEON per i match */
 .matchup-row {
     background: rgba(5, 5, 5, 0.9);
     border: 2px solid #bf00ff; /* Viola Neon */
@@ -291,7 +289,6 @@ footer {
     align-items: center;
     padding: 2px;
     box-shadow: 0 0 15px rgba(191, 0, 255, 0.3);
-    position: relative;
 }
 
 .p-box {
@@ -301,12 +298,32 @@ footer {
     align-items: center;
     padding: 12px 5px;
     background: #000;
+    min-width: 0; /* Fix per evitare che i link allarghino il box */
 }
 
 .p-box strong {
-    color: #fff !important; /* Nomi bianchi per leggibilità, o var(--gold) se preferisci */
+    color: #fff;
     font-size: 0.85em;
     text-transform: uppercase;
+    display: block;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* --- STILE LINK GIOCATORI --- */
+.player-link {
+    color: #fff !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.player-link:hover {
+    color: #bf00ff !important;
+    text-shadow: 0 0 8px #bf00ff;
 }
 
 .p-deck {
@@ -322,24 +339,14 @@ footer {
     font-size: 0.7em;
 }
 
-/* Solo il CAMPIONE è ORO */
-.champion-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .champion-box {
     border: 2px solid var(--gold) !important;
     box-shadow: 0 0 25px rgba(255, 204, 0, 0.5);
     min-width: 180px;
-    background: #000;
 }
 
 .champion-box strong {
     color: var(--gold) !important;
-    font-size: 1em;
 }
 
 .crown {
@@ -350,21 +357,7 @@ footer {
 
 .empty { opacity: 0.4; }
 
-/* Responsive Mobile */
 @media (max-width: 1100px) {
     .bracket-container { flex-direction: column; gap: 80px; }
     .bracket-column { height: auto; width: 100%; }
-}
-
-/* Stile per i link dei giocatori */
-.player-link {
-    color: inherit; 
-    text-decoration: none; 
-    transition: all 0.3s ease;
-}
-
-.player-link:hover {
-    color: #bf00ff; 
-    text-shadow: 0 0 10px #bf00ff; 
-    cursor: pointer;
 }
