@@ -250,80 +250,105 @@ footer {
     color: #ffffff !important;
 }
 
-/* --- STILE TABELLONE CORRETTO --- */
-.bracket-container {
+/* --- BRACKET VERTICALE CON CONNESSIONI --- */
+.vertical-bracket {
     display: flex;
-    justify-content: flex-start; /* Allineati a sinistra */
-    align-items: flex-start;
-    gap: 40px;
-    max-width: 1300px;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0; /* Gestiamo lo spazio con il padding per le linee */
+    max-width: 1200px;
     margin: 40px auto;
-    padding: 20px;
-    overflow-x: auto;
 }
 
-.bracket-column {
+.tier {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    min-width: 200px;
-}
-
-.matchup-box {
-    background: rgba(15, 0, 30, 0.9);
-    border: 1px solid var(--accent-color);
-    padding: 10px;
-    border-radius: 5px;
+    align-items: center;
+    padding: 30px 0;
     position: relative;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-.fase-label {
-    display: block;
-    font-size: 0.6em;
-    color: var(--accent-color);
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 5px;
+/* Linea che scende dal centro di ogni piano */
+.line-down::before {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    width: 2px;
+    height: 60px;
+    background: var(--accent-color);
+    z-index: 0;
+}
+
+.tier-label {
+    color: var(--gold);
+    font-size: 0.8em;
+    margin-bottom: 15px;
+    background: #000;
+    padding: 2px 10px;
+    border: 1px solid var(--accent-color);
+    z-index: 1;
+}
+
+.matchup-container-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    z-index: 1;
+}
+
+.matchup-row {
+    background: #0a0a0a;
+    border: 2px solid var(--accent-color);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 240px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+    position: relative;
+}
+
+/* Evidenzia il match collegato al preliminare */
+.highlight-prelim {
+    border-color: var(--gold);
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.2);
 }
 
 .slot {
     background: #000;
-    padding: 10px;
-    margin: 5px 0;
-    font-size: 0.9em;
+    padding: 8px;
+    min-width: 100px;
     text-align: center;
     border: 1px solid #333;
 }
 
 .slot strong {
     color: var(--gold) !important;
-    text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
-    text-transform: uppercase;
-}
-
-.vs-mini {
-    font-size: 0.7em;
-    color: var(--gold);
-    text-align: center;
-    font-weight: bold;
+    text-shadow: 0 0 5px #000;
 }
 
 .attesa {
-    color: #555;
+    color: #666;
     border: 1px dashed #444 !important;
 }
 
+.vs-mini { color: var(--gold); font-weight: bold; font-size: 0.8em; }
+
 .winner-slot {
     border: 2px solid var(--gold) !important;
-    box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
-    margin-top: 10px;
+    box-shadow: 0 0 25px var(--gold);
+    padding: 15px;
 }
 
-.crown { text-align: center; font-size: 2em; }
+.crown { font-size: 2.5em; margin-bottom: 5px; }
 
-/* Responsive mobile */
+/* Mobile */
 @media (max-width: 800px) {
-    .bracket-container { flex-direction: column; align-items: center; }
-    .bracket-column { width: 90%; }
+    .matchup-container-row { flex-direction: column; align-items: center; }
+    .line-down::before { display: none; } 
 }
