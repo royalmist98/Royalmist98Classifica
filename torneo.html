@@ -3,72 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arena dei Duelli - Royalmist98</title>
+    <title>Tabellone Torneo - Royalmist98</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/584a4764-cdec-45b8-b26b-d2500895bf2c-profile_image-70x70.png" alt="Logo" class="logo">
+        <img src="https://i.imgur.com/P0CBe9H.png" alt="Logo" class="logo">
         <h1>ARENA DEI DUELLI</h1>
     </header>
 
     <div class="info-box">
-        <p>I duellanti sono pronti. <strong>Star</strong> attende lo sfidante dal turno preliminare.</p>
+        <p>Il cammino verso la gloria è tracciato. Solo uno sarà il <strong>Vincitore del Torneo</strong>.</p>
     </div>
 
-    <main>
-        <section class="torneo-fase">
-            <h2 class="titolo-fase">TURNO PRELIMINARE</h2>
-            <div class="bracket-grid">
-                <div class="matchup">
-                    <div class="slot-torneo"><strong>TBD</strong><br><small>Sfidante A</small></div>
-                    <div class="vs">VS</div>
-                    <div class="slot-torneo"><strong>TBD</strong><br><small>Sfidante B</small></div>
-                </div>
+    <div class="bracket-container">
+        
+        <div class="bracket-column">
+            <div class="matchup-box">
+                <div class="slot"><strong>SubatomicFox</strong> </div>
+                <div class="vs-mini">VS</div>
+                <div class="slot"><strong>Rinkasho</strong> </div>
             </div>
-            <p class="info-match">Il vincitore sfida Star nei Quarti</p>
-        </section>
 
-        <section class="torneo-fase">
-            <h2 class="titolo-fase">QUARTI DI FINALE</h2>
-            <div class="bracket-grid">
-                
-                <div class="matchup">
-                    <div class="slot-torneo"><strong>Macro</strong><br><small>Six Samurai</small></div>
-                    <div class="vs">VS</div>
-                    <div class="slot-torneo"><strong>Bomberman</strong><br><small>Magidolce</small></div>
-                </div>
-
-                <div class="matchup">
-                    <div class="slot-torneo"><strong>Star</strong><br><small>Hero</small></div>
-                    <div class="vs">VS</div>
-                    <div class="slot-torneo slot-attesa"><strong>Vincitore Prel.</strong><br><small>???</small></div>
-                </div>
-
-                <div class="matchup">
-                    <div class="slot-torneo"><strong>SubatomicFox</strong><br><small>Jurrac</small></div>
-                    <div class="vs">VS</div>
-                    <div class="slot-torneo"><strong>Rinkasho</strong><br><small>Jurrac</small></div>
-                </div>
-
-                <div class="matchup">
-                    <div class="slot-torneo"><strong>Powerox</strong><br><small>Blackwing</small></div>
-                    <div class="vs">VS</div>
-                    <div class="slot-torneo"><strong>PugNGlease</strong><br><small>Burn</small></div>
-                </div>
-
-                <div class="matchup">
-                    <div class="slot-torneo"><strong>VinMarco</strong><br><small>Blue-Eyes</small></div>
-                    <div class="vs">VS</div>
-                    <div class="slot-torneo"><strong>Leone di Vibo</strong><br><small>Gladiator</small></div>
-                </div>
-
+            <div class="matchup-box">
+                <div class="slot"><strong>Macro</strong> [cite: 3]</div>
+                <div class="vs-mini">VS</div>
+                <div class="slot"><strong>Bomberman</strong> [cite: 4]</div>
             </div>
-        </section>
-    </main>
 
-    <div style="text-align: center; margin: 50px 0;">
+            <div class="matchup-box">
+                <div class="slot"><strong>Powerox</strong> [cite: 8]</div>
+                <div class="vs-mini">VS</div>
+                <div class="slot"><strong>PugNGlease</strong> [cite: 9]</div>
+            </div>
+
+            <div class="matchup-box">
+                <div class="slot"><strong>VinMarco</strong> [cite: 11]</div>
+                <div class="vs-mini">VS</div>
+                <div class="slot"><strong>Leone di Vibo</strong> [cite: 12]</div>
+            </div>
+        </div>
+
+        <div class="bracket-column">
+            <div class="matchup-box connector-top">
+                <div class="slot gold-border"><strong>Star</strong> </div>
+                <div class="vs-mini">VS</div>
+                <div class="slot attesa">Vincitore Match 1 </div>
+            </div>
+
+            <div class="matchup-box connector-bottom">
+                <div class="slot attesa">Vincitore Match 3 [cite: 10]</div>
+                <div class="vs-mini">VS</div>
+                <div class="slot attesa">Vincitore Match 4 [cite: 11]</div>
+            </div>
+        </div>
+
+        <div class="bracket-column">
+            <div class="matchup-box final">
+                <h3 style="color:var(--gold); font-size: 0.8em;">FINALE</h3>
+                <div class="slot attesa">Finalista 1 [cite: 2]</div>
+                <div class="vs-mini">VS</div>
+                <div class="slot attesa">Finalista 2 [cite: 6]</div>
+            </div>
+        </div>
+
+        <div class="bracket-column">
+            <div class="winner-box">
+                <div class="crown">👑</div>
+                <div class="slot winner-slot"><strong>CAMPIONE</strong> </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="text-align: center; margin: 40px 0;">
         <a href="index.html" class="btn-enter" style="text-decoration: none; border: 1px solid var(--gold); padding: 10px 20px; border-radius: 5px;">TORNA ALL'HUB</a>
     </div>
 
