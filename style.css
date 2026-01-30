@@ -250,13 +250,13 @@ footer {
     color: #ffffff !important;
 }
 
-/* --- LAYOUT ORIZZONTALE OTTIMIZZATO --- */
+/* --- LAYOUT TORNEO DEFINITIVO --- */
 .bracket-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 30px;
-    padding: 40px;
+    gap: 20px;
+    padding: 60px 20px;
     max-width: 100%;
     margin: 0 auto;
     overflow-x: auto;
@@ -265,27 +265,33 @@ footer {
 .bracket-column {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* Mantiene i match centrati verticalmente */
     gap: 40px;
-    min-width: 320px; /* Più largo per ospitare i nomi affiancati */
+    min-width: 280px;
+    height: 600px; /* Altezza fissa per aiutare l'allineamento */
 }
 
+/* Titoli in ORO */
 .column-title {
-    color: #777;
-    font-size: 0.7em;
+    color: var(--gold);
+    font-size: 0.9em;
     text-align: center;
     letter-spacing: 3px;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.4);
 }
 
+/* Bordi VIOLA NEON per i match */
 .matchup-row {
-    background: rgba(10, 10, 10, 0.9);
-    border: 1px solid #222;
+    background: rgba(5, 5, 5, 0.9);
+    border: 2px solid #bf00ff; /* Viola Neon */
     border-radius: 4px;
     display: flex;
     align-items: center;
-    padding: 5px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    padding: 2px;
+    box-shadow: 0 0 15px rgba(191, 0, 255, 0.3);
+    position: relative;
 }
 
 .p-box {
@@ -293,55 +299,59 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 12px 5px;
     background: #000;
 }
 
 .p-box strong {
-    color: var(--gold) !important;
-    font-size: 0.9em;
+    color: #fff !important; /* Nomi bianchi per leggibilità, o var(--gold) se preferisci */
+    font-size: 0.85em;
     text-transform: uppercase;
 }
 
 .p-deck {
-    color: #555;
-    font-size: 0.7em;
-    margin-top: 3px;
-    font-style: italic;
+    color: #888;
+    font-size: 0.65em;
+    margin-top: 4px;
 }
 
 .vs-divider {
-    padding: 0 10px;
-    color: #444;
+    padding: 0 8px;
+    color: #bf00ff;
     font-weight: bold;
     font-size: 0.7em;
 }
 
-/* Solo il Campione è dorato */
-.champion-box {
-    border: 2px solid var(--gold) !important;
-    box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
-    min-width: 200px;
+/* Solo il CAMPIONE è ORO */
+.champion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.champion-section {
-    align-items: center;
+.champion-box {
+    border: 2px solid var(--gold) !important;
+    box-shadow: 0 0 25px rgba(255, 204, 0, 0.5);
+    min-width: 180px;
+    background: #000;
+}
+
+.champion-box strong {
+    color: var(--gold) !important;
+    font-size: 1em;
 }
 
 .crown {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 10px;
-    filter: drop-shadow(0 0 8px var(--gold));
+    filter: drop-shadow(0 0 10px var(--gold));
 }
 
-.empty {
-    opacity: 0.5;
-}
+.empty { opacity: 0.4; }
 
-/* Mobile: una colonna sotto l'altra */
-@media (max-width: 1200px) {
-    .bracket-container {
-        flex-direction: column;
-        gap: 50px;
-    }
+/* Responsive Mobile */
+@media (max-width: 1100px) {
+    .bracket-container { flex-direction: column; gap: 80px; }
+    .bracket-column { height: auto; width: 100%; }
 }
