@@ -250,108 +250,98 @@ footer {
     color: #ffffff !important;
 }
 
-/* --- BRACKET 5 COLONNE - DISPOSIZIONE AMPIA --- */
+/* --- LAYOUT ORIZZONTALE OTTIMIZZATO --- */
 .bracket-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     padding: 40px;
     max-width: 100%;
     margin: 0 auto;
-    overflow-x: auto; /* Permette lo scroll se lo schermo è piccolo */
-    min-height: 700px;
+    overflow-x: auto;
 }
 
 .bracket-column {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-    min-width: 220px;
-    gap: 30px;
+    justify-content: center;
+    gap: 40px;
+    min-width: 320px; /* Più largo per ospitare i nomi affiancati */
 }
 
 .column-title {
-    color: var(--gold);
-    font-size: 0.8em;
+    color: #777;
+    font-size: 0.7em;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin-bottom: 20px;
-    border-bottom: 1px solid rgba(191, 0, 255, 0.3);
-    padding-bottom: 10px;
 }
 
-.matchup-box {
+.matchup-row {
     background: rgba(10, 10, 10, 0.9);
-    border: 1px solid var(--accent-color);
-    border-radius: 8px;
-    padding: 12px;
+    border: 1px solid #222;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.p-box {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-}
-
-.star-match { border-color: var(--gold); }
-.final-box { border: 2px solid var(--gold); transform: scale(1.1); }
-
-.player-slot {
-    background: #000;
+    align-items: center;
     padding: 10px;
-    border: 1px solid #333;
-    text-align: center;
+    background: #000;
 }
 
-.p-name strong {
+.p-box strong {
     color: var(--gold) !important;
-    font-size: 0.95em;
+    font-size: 0.9em;
     text-transform: uppercase;
-    text-shadow: 0 0 5px rgba(255, 204, 0, 0.3);
 }
 
 .p-deck {
-    color: #bbb;
+    color: #555;
     font-size: 0.7em;
-    margin-top: 4px;
+    margin-top: 3px;
     font-style: italic;
 }
 
-.vs-label {
-    color: var(--gold);
+.vs-divider {
+    padding: 0 10px;
+    color: #444;
     font-weight: bold;
     font-size: 0.7em;
-    text-align: center;
-    margin: 5px 0;
 }
 
-.status-empty {
-    color: #444;
-    border: 1px dashed #444 !important;
-}
-
-/* Colonna Campione */
-.champion-col {
-    justify-content: center;
-    padding-left: 20px;
-}
-
-.winner-display {
-    text-align: center;
-}
-
-.champion-slot {
+/* Solo il Campione è dorato */
+.champion-box {
     border: 2px solid var(--gold) !important;
-    box-shadow: 0 0 30px rgba(255, 204, 0, 0.4);
-    padding: 20px;
-    min-width: 150px;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+    min-width: 200px;
+}
+
+.champion-section {
+    align-items: center;
 }
 
 .crown {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 10px;
-    filter: drop-shadow(0 0 10px var(--gold));
+    filter: drop-shadow(0 0 8px var(--gold));
 }
 
-/* Scrollbar per navigare il torneo */
-.bracket-container::-webkit-scrollbar { height: 8px; }
-.bracket-container::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+.empty {
+    opacity: 0.5;
+}
+
+/* Mobile: una colonna sotto l'altra */
+@media (max-width: 1200px) {
+    .bracket-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
