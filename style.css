@@ -230,3 +230,20 @@ footer {
     font-size: 0.8em;
     color: var(--accent-color);
 }
+
+.hub-card h3 {
+    color: var(--gold) !important;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.btn-enter {
+    color: var(--gold) !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hub-card p {
+    color: var(--gold) !important;
+}
