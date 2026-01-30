@@ -250,85 +250,87 @@ footer {
     color: #ffffff !important;
 }
 
-/* ================================================= */
-/* TABELLONE TORNEO A FASI (PULITO)                  */
-/* ================================================= */
-
-.torneo-fase {
-    background: rgba(20, 0, 40, 0.7);
-    border: 1px solid var(--accent-color);
-    border-radius: 15px;
-    padding: 20px;
-    margin: 30px auto;
-    max-width: 1100px;
-    clear: both;
-}
-
-.titolo-fase {
-    color: var(--gold);
-    text-align: center;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--accent-color);
-    padding-bottom: 5px;
-}
-
-.bracket-grid {
+/* --- BRACKET VISUAL STYLE --- */
+.bracket-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.matchup {
-    display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 10px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    overflow-x: auto; /* Per mobile */
 }
 
-.slot-torneo {
-    background: #000;
+.bracket-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 600px;
+}
+
+.matchup-box {
+    background: rgba(15, 0, 30, 0.9);
     border: 1px solid var(--accent-color);
-    border-radius: 5px;
     padding: 10px;
+    border-radius: 5px;
     width: 180px;
-    text-align: center;
+    position: relative;
 }
 
-.slot-torneo strong {
+.slot {
+    background: #000;
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 0.9em;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.slot strong {
     color: var(--gold) !important;
     text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
-    display: block;
 }
 
-.slot-torneo small {
-    color: #ccc;
-    font-size: 0.8em;
-}
-
-.slot-attesa {
-    border: 1px dashed #555;
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.vs {
+.vs-mini {
+    font-size: 0.7em;
     color: var(--gold);
-    font-weight: bold;
-    font-size: 0.9em;
-}
-
-.info-match {
     text-align: center;
-    color: #888;
-    font-size: 0.8em;
-    margin-top: 10px;
+    font-weight: bold;
 }
 
-/* Fix Mobile */
-@media (max-width: 600px) {
-    .matchup { flex-direction: column; }
-    .slot-torneo { width: 220px; }
+.attesa {
+    color: #666;
+    font-style: italic;
+    border: 1px dashed #444 !important;
+}
+
+.winner-slot {
+    border: 2px solid var(--gold) !important;
+    box-shadow: 0 0 15px var(--gold);
+}
+
+.crown {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+/* Linee di connessione semplici */
+.matchup-box::after {
+    content: "";
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    width: 25px;
+    height: 2px;
+    background: var(--accent-color);
+}
+
+.final::after { display: none; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .bracket-container { flex-direction: column; height: auto; }
+    .bracket-column { height: auto; margin-bottom: 40px; }
+    .matchup-box::after { display: none; }
 }
