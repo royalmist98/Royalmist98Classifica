@@ -352,7 +352,11 @@ footer {
 .crown {
     font-size: 3em;
     margin-bottom: 10px;
+    display: block;
+    width: 100%; 
+    text-align: center;
     filter: drop-shadow(0 0 10px var(--gold));
+    line-height: 1;
 }
 
 .empty { opacity: 0.4; }
@@ -361,3 +365,4 @@ footer {
     .bracket-container { flex-direction: column; gap: 80px; }
     .bracket-column { height: auto; width: 100%; }
 }
+
