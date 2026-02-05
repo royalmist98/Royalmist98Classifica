@@ -366,3 +366,47 @@ footer {
 @media (max-width: 1300px) {
     .bracket-container { justify-content: flex-start; } /* Evita che si schiacci troppo */
 }
+
+/* --- STILE TENDINA ARCHIVIO --- */
+details {
+    background: rgba(10, 10, 10, 0.9); /* Sfondo scuro come il resto del sito */
+    border: 2px solid var(--gold);
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 1400px;
+    overflow: hidden;
+}
+
+summary {
+    padding: 20px;
+    font-family: 'Cinzel', serif; /* Font epico */
+    color: var(--gold);
+    font-size: 1.3em;
+    cursor: pointer;
+    text-align: center;
+    list-style: none; /* Rimuove la freccetta brutta di default */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: background 0.3s;
+    outline: none;
+}
+
+summary:hover {
+    background: rgba(255, 204, 0, 0.1); /* Leggero bagliore al passaggio del mouse */
+}
+
+/* Freccetta personalizzata dorata */
+summary::after {
+    content: ' ▼';
+    font-size: 0.7em;
+    color: var(--gold);
+    transition: 0.3s;
+}
+
+details[open] summary::after {
+    content: ' ▲'; /* Cambia verso quando è aperto */
+}
+
+details[open] summary {
+    border-bottom: 1px solid rgba(255, 204, 0, 0.3);
+}
