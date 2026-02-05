@@ -19,7 +19,7 @@ body {
     color: #e0e0e0;
     margin: 0;
     padding: 0;
-    background-image: url('https://i.imgur.com/VZBUPvK.png');
+    background-image: url('https://i.imgur.com/JtVVp9R.png');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -28,7 +28,7 @@ body {
 
 @media (min-width: 1000px) {
     body {
-        background-image: url('https://i.imgur.com/2ameBIR.jpeg');
+        background-image: url('https://i.imgur.com/VZBUPvK.png');
     }
 }
 
@@ -470,4 +470,5 @@ td {
     border-color: var(--gold);
     box-shadow: 0 0 10px var(--gold);
 }
+
 
