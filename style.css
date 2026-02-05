@@ -19,7 +19,6 @@ body {
     color: #e0e0e0;
     margin: 0;
     padding: 0;
-    /* SFONDO MOBILE */
     background-image: url('https://i.imgur.com/X2gqBaB.jpeg');
     background-size: cover;
     background-attachment: fixed;
@@ -29,7 +28,6 @@ body {
 
 @media (min-width: 1000px) {
     body {
-        /* SFONDO PC */
         background-image: url('https://i.imgur.com/2ameBIR.jpeg');
     }
 }
@@ -41,7 +39,7 @@ body {
     display: block !important;
     max-width: 800px;
     width: 90%;
-    margin: 60px auto !important; /* Forza la centratura orizzontale */
+    margin: 60px auto !important;
     padding: 25px;
     background: rgba(15, 0, 30, 0.9) !important;
     border: 1px solid var(--accent-color) !important;
@@ -88,7 +86,6 @@ h1 {
     color: var(--gold);
     text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
     margin: 5px 0;
-    letter-spacing: 3px;
 }
 
 /* ================================================= */
@@ -101,7 +98,6 @@ h1 {
     flex-wrap: wrap;
     margin: 40px auto;
     max-width: 1100px;
-    padding: 20px;
 }
 
 .hub-card {
@@ -120,65 +116,72 @@ h1 {
 .hub-card:hover {
     transform: translateY(-15px);
     border-color: var(--gold);
-    /* Bagliore profondo viola e oro */
     box-shadow: 0 15px 35px rgba(191, 0, 255, 0.5), 0 0 15px rgba(255, 204, 0, 0.2);
 }
 
 .hub-icon { 
-    font-size: 6em; /* Icone giganti */
+    font-size: 6em; 
     display: block; 
     margin-bottom: 20px; 
-    filter: drop-shadow(0 0 10px rgba(191, 0, 255, 0.4));
     transition: transform 0.3s ease;
 }
 
 .hub-card:hover .hub-icon {
-    transform: scale(1.15); /* Zoom sull'icona */
-    filter: drop-shadow(0 0 20px var(--gold));
-}
-
-.hub-card h2 {
-    font-family: 'Cinzel', serif;
-    color: var(--gold) !important;
-    text-shadow: 0 0 10px rgba(255, 204, 0, 0.4);
+    transform: scale(1.15);
 }
 
 /* ================================================= */
-/* 6. TABELLONE TORNEO (FORMA A FRECCIA)            */
+/* 6. TABELLONE TORNEO (STRUTTURA ORIGINALE)         */
 /* ================================================= */
 details {
     background: rgba(10, 10, 10, 0.9);
     border: 2px solid var(--gold);
     margin: 20px auto;
     border-radius: 10px;
-    max-width: 98%;
+    max-width: 1400px;
     overflow: hidden;
+}
+
+summary {
+    padding: 20px;
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 1.3em;
+    cursor: pointer;
+    text-align: center;
+    list-style: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 .bracket-container {
     display: flex;
-    justify-content: flex-start; /* Torna a spingere verso destra */
-    align-items: stretch; /* Permette alle colonne di gestire l'altezza */
-    gap: 40px;
-    padding: 60px 40px;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    padding: 40px 10px;
+    max-width: 100%;
+    margin: 0 auto;
     overflow-x: auto;
 }
 
 .bracket-column {
     display: flex;
     flex-direction: column;
-    justify-content: space-around; /* QUESTO CREA LA FORMA A FRECCIA */
+    justify-content: center;
+    gap: 20px;
     min-width: 260px;
+    height: 850px; /* Altezza che crea l'effetto freccia */
 }
 
 .column-title {
     color: var(--gold);
-    font-family: 'Cinzel', serif;
-    font-size: 0.9em;
+    font-size: 0.85em;
     text-align: center;
-    margin-bottom: 30px;
     letter-spacing: 2px;
+    margin-bottom: 15px;
     text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.4);
 }
 
 .matchup-row {
@@ -187,9 +190,8 @@ details {
     border-radius: 4px;
     display: flex;
     align-items: center;
-    width: 100%;
+    padding: 2px;
     box-shadow: 0 0 10px rgba(191, 0, 255, 0.2);
-    margin: 10px 0; /* Spazio tra i match */
 }
 
 .p-box {
@@ -197,40 +199,36 @@ details {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 12px 5px;
+    padding: 10px 5px;
     background: #000;
-    min-width: 120px;
+    min-width: 0;
 }
 
 .p-box strong {
-    font-size: 0.85em;
-    text-transform: uppercase;
     color: #fff;
-    /* Rimuoviamo il troncamento per evitare che i nomi sembrino tagliati male */
+    font-size: 0.8em;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    width: 100%;
 }
 
 .p-deck {
     color: #888;
-    font-size: 0.7em;
-    margin-top: 5px;
+    font-size: 0.65em;
+    margin-top: 3px;
     font-style: italic;
 }
 
 .vs-divider {
-    padding: 0 10px;
+    padding: 0 5px;
     color: var(--accent-color);
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
-/* --- EFFETTO SCALETTA --- */
-/* Aumentiamo l'altezza delle colonne man mano che avanziamo per distanziare i match */
-.bracket-column:nth-child(2) { margin-top: 20px; } /* Il Quartino */
-.bracket-column:nth-child(3) { margin-top: 0; }    /* Semifinali */
-.bracket-column:nth-child(4) { margin-top: 0; }    /* Finale */
-
 /* ================================================= */
-/* 7. RESET LINK (NOMI BIANCHI E MAZZI GRIGI)       */
+/* 7. RESET LINK (NOMI BIANCHI)                     */
 /* ================================================= */
 .player-link {
     color: white !important;
@@ -239,8 +237,8 @@ details {
 }
 
 .player-link:hover {
-    color: var(--gold) !important;
-    text-shadow: 0 0 8px var(--gold);
+    color: var(--accent-color) !important;
+    text-shadow: 0 0 8px var(--accent-color);
 }
 
 .deck-link {
@@ -250,7 +248,7 @@ details {
 }
 
 .deck-link:hover {
-    color: #00d4ff !important; /* Azzurro neon per i mazzi */
+    color: #00d4ff !important;
     text-shadow: 0 0 10px #00d4ff;
 }
 
@@ -270,31 +268,15 @@ details {
 }
 
 .crown {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 5px;
     filter: drop-shadow(0 0 10px var(--gold));
     text-align: center;
 }
 
 /* ================================================= */
-/* 9. ALTRI ELEMENTI (PODIO E FOOTER)               */
+/* 9. ALTRI ELEMENTI                                */
 /* ================================================= */
-.sezione-titolo { text-align: center; color: var(--gold); margin-top: 50px; }
-
-#podio-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 400px;
-    margin: 150px auto 50px;
-    max-width: 900px;
-}
-
-.podio-blocco { width: 30%; position: relative; border-radius: 8px 8px 0 0; }
-.first-place-podio { height: 100%; background: linear-gradient(to top, #ffd700, #9a7b0c); margin: 0 10px; }
-.second-place-podio { height: 70%; background: linear-gradient(to top, #c0c0c0, #708090); margin-right: 10px; }
-.third-place-podio { height: 45%; background: linear-gradient(to top, #cd7f32, #8b4513); margin-left: 10px; }
-
 .btn-enter {
     color: var(--gold) !important;
     font-weight: bold;
@@ -308,6 +290,6 @@ details {
 
 .btn-enter:hover { background: var(--gold); color: black !important; }
 
-footer { text-align: center; padding: 40px; font-size: 0.8em; color: var(--accent-color); }
-
-
+@media (max-width: 1300px) {
+    .bracket-container { justify-content: flex-start; }
+}
