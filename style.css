@@ -331,3 +331,59 @@ td {
 @media (max-width: 1300px) {
     .bracket-container { justify-content: flex-start; }
 }
+
+/* ================================================= */
+/* SEZIONE COMING SOON TORNEO EDISON                */
+/* ================================================= */
+.coming-soon-container {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.coming-soon-container h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5em;
+    color: var(--gold);
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px var(--gold);
+}
+
+.coming-soon-container p {
+    font-size: 1.1em;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.social-contact {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    text-decoration: none !important;
+    color: white !important;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+/* Colore Instagram al passaggio */
+.social-link:hover {
+    color: #E1306C !important; 
+    text-shadow: 0 0 10px #E1306C;
+}
+
+/* Colore Twitch al passaggio (selettore specifico se vuoi differenziarli) */
+.social-link[href*="twitch"]:hover {
+    color: #9146FF !important;
+    text-shadow: 0 0 10px #9146FF;
+}
+
+/* Importante: assicurati di avere FontAwesome nel tuo <head> per vedere i loghi */
