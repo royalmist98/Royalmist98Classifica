@@ -449,3 +449,24 @@ td {
     transform: translateY(-8px);
     color: #fff !important;
 }
+
+/* STILE PER IL PULSANTE INTERNO ALLE CARD */
+.inner-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+/* EFFETTO GIALLO AL PASSAGGIO DEL MOUSE */
+.hub-card:hover .inner-button {
+    background-color: var(--gold);
+    color: black;
+    border-color: var(--gold);
+    box-shadow: 0 0 10px var(--gold);
+}
