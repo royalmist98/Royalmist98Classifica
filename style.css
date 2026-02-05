@@ -33,36 +33,10 @@ body {
 }
 
 /* ================================================= */
-/* 3. INFO-BOX (MESSAGGIO CENTRALE)                 */
+/* 3. INFO-BOX (NASCOSTA)                           */
 /* ================================================= */
 .info-box {
-    display: block !important;
-    max-width: 800px;
-    width: 90%;
-    margin: 60px auto !important;
-    padding: 25px;
-    background: rgba(15, 0, 30, 0.9) !important;
-    border: 1px solid var(--accent-color) !important;
-    border-left: 5px solid var(--gold) !important;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(191, 0, 255, 0.4);
-    text-align: center;
-    position: relative;
-    box-sizing: border-box;
-    clear: both;
-}
-
-.info-box::before {
-    content: "SYSTEM MESSAGE";
-    position: absolute;
-    top: -12px;
-    left: 20px;
-    background: #000;
-    padding: 0 10px;
-    font-size: 0.7em;
-    color: var(--accent-color);
-    font-weight: bold;
-    border: 1px solid var(--accent-color);
+    display: none !important; /* Abbiamo deciso di farla sparire */
 }
 
 /* ================================================= */
@@ -171,7 +145,7 @@ summary {
     justify-content: center;
     gap: 20px;
     min-width: 260px;
-    height: 850px; /* Altezza che crea l'effetto freccia */
+    height: 850px; 
 }
 
 .column-title {
@@ -253,8 +227,75 @@ summary {
 }
 
 /* ================================================= */
-/* 8. SEZIONE CAMPIONE                              */
+/* 8. PODIO (CLASSIFICA) - FIX DIMENSIONI           */
 /* ================================================= */
+.sezione-titolo {
+    text-align: center;
+    color: var(--gold);
+    margin-top: 50px;
+}
+
+#podio-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 380px; 
+    margin: 150px auto 50px; 
+    max-width: 900px;
+}
+
+.podio-blocco {
+    width: 30%;
+    position: relative;
+    border-radius: 8px 8px 0 0;
+}
+
+.first-place-podio { height: 100%; background: linear-gradient(to top, #ffd700, #9a7b0c); margin: 0 10px; }
+.second-place-podio { height: 70%; background: linear-gradient(to top, #c0c0c0, #708090); margin-right: 10px; }
+.third-place-podio { height: 45%; background: linear-gradient(to top, #cd7f32, #8b4513); margin-left: 10px; }
+
+.podio-info {
+    position: absolute;
+    top: -160px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px; /* Ripristina la dimensione corretta per le carte */
+    text-align: center;
+}
+
+.carta-preferita {
+    width: 100% !important;
+    height: auto !important;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* ================================================= */
+/* 9. TABELLA CLASSIFICA E CAMPIONE                 */
+/* ================================================= */
+table {
+    width: 95%;
+    max-width: 1000px;
+    margin: 80px auto 100px;
+    border-collapse: collapse;
+    background: rgba(10, 10, 10, 0.9);
+    border: 1px solid #444;
+}
+
+th {
+    background: #000;
+    color: var(--gold);
+    padding: 15px;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
 .champion-container {
     display: flex;
     flex-direction: column;
@@ -274,9 +315,6 @@ summary {
     text-align: center;
 }
 
-/* ================================================= */
-/* 9. ALTRI ELEMENTI                                */
-/* ================================================= */
 .btn-enter {
     color: var(--gold) !important;
     font-weight: bold;
