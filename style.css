@@ -387,8 +387,8 @@ td {
 /* BOX INVITO (POSIZIONATO SOTTO L'HUB)             */
 /* ================================================= */
 .join-us-box {
-    max-width: 1000px;
-    margin: 80px auto 100px !important; /* Crea lo spazio sotto i pulsanti dell'Hub */
+    max-width: 1100px;
+    margin: 80px auto 100px !important;
     padding: 40px;
     background: rgba(10, 10, 10, 0.7); 
     border-top: 2px solid var(--gold); 
@@ -409,36 +409,41 @@ td {
     color: #bbb;
     font-size: 1em;
     margin-bottom: 35px;
-    font-style: italic;
 }
 
 .social-hub {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .social-icon-link {
     text-decoration: none !important;
     color: white !important;
-    font-size: 1em;
+    font-size: 0.95em;
     font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px; /* Spazio tra logo e nome */
     padding: 12px 20px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     transition: all 0.3s ease;
+    min-width: 180px; /* Rende i pulsanti più uniformi */
+    justify-content: center;
+}
+
+.social-icon-link i {
+    font-size: 1.3em; /* Logo leggermente più grande del testo */
 }
 
 /* Colori al passaggio del mouse */
-.social-icon-link.insta:hover { background: #E1306C; box-shadow: 0 0 20px #E1306C; }
-.social-icon-link.twitch:hover { background: #9146FF; box-shadow: 0 0 20px #9146FF; }
-.social-icon-link.youtube:hover { background: #FF0000; box-shadow: 0 0 20px #FF0000; }
-.social-icon-link.youtube-live:hover { background: #CC0000; box-shadow: 0 0 20px #CC0000; }
+.social-icon-link.insta:hover { background: #E1306C; box-shadow: 0 0 20px #E1306C; border-color: transparent; }
+.social-icon-link.twitch:hover { background: #9146FF; box-shadow: 0 0 20px #9146FF; border-color: transparent; }
+.social-icon-link.youtube:hover { background: #FF0000; box-shadow: 0 0 20px #FF0000; border-color: transparent; }
+.social-icon-link.youtube-live:hover { background: #CC0000; box-shadow: 0 0 20px #CC0000; border-color: transparent; }
 
 .social-icon-link:hover {
     transform: translateY(-8px);
