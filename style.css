@@ -144,47 +144,31 @@ h1 {
 }
 
 /* ================================================= */
-/* 6. TABELLONE TORNEO E ARCHIVIO                   */
+/* 6. TABELLONE TORNEO (FORMA A FRECCIA)            */
 /* ================================================= */
 details {
     background: rgba(10, 10, 10, 0.9);
     border: 2px solid var(--gold);
     margin: 20px auto;
     border-radius: 10px;
-    max-width: 95%; /* Si adatta meglio agli schermi */
+    max-width: 98%;
     overflow: hidden;
-}
-
-summary {
-    padding: 20px;
-    font-family: 'Cinzel', serif;
-    color: var(--gold);
-    font-size: 1.3em;
-    cursor: pointer;
-    text-align: center;
-    list-style: none;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    transition: background 0.3s;
-    outline: none;
 }
 
 .bracket-container {
     display: flex;
-    justify-content: center; /* Centra le colonne orizzontalmente */
-    align-items: flex-start; /* Allinea i titoli in alto */
-    gap: 30px; /* Più spazio tra le fasi del torneo */
-    padding: 40px 20px;
+    justify-content: flex-start; /* Torna a spingere verso destra */
+    align-items: stretch; /* Permette alle colonne di gestire l'altezza */
+    gap: 40px;
+    padding: 60px 40px;
     overflow-x: auto;
-    min-height: 900px;
 }
 
 .bracket-column {
     display: flex;
     flex-direction: column;
-    align-items: center; /* CENTRA I TITOLI RISPETTO AI BOX */
-    gap: 25px;
-    min-width: 240px; /* Larghezza fissa per stabilità */
+    justify-content: space-around; /* QUESTO CREA LA FORMA A FRECCIA */
+    min-width: 260px;
 }
 
 .column-title {
@@ -192,11 +176,9 @@ summary {
     font-family: 'Cinzel', serif;
     font-size: 0.9em;
     text-align: center;
-    width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     letter-spacing: 2px;
-    border-bottom: 1px solid rgba(255, 204, 0, 0.3);
-    padding-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .matchup-row {
@@ -205,8 +187,9 @@ summary {
     border-radius: 4px;
     display: flex;
     align-items: center;
-    width: 100%; /* Occupa tutta la larghezza della colonna */
+    width: 100%;
     box-shadow: 0 0 10px rgba(191, 0, 255, 0.2);
+    margin: 10px 0; /* Spazio tra i match */
 }
 
 .p-box {
@@ -214,22 +197,16 @@ summary {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 12px 5px;
     background: #000;
-    min-width: 110px; /* Impedisce che si stringa troppo */
-    overflow: hidden; /* Taglia eventuali testi troppo lunghi */
+    min-width: 120px;
 }
 
 .p-box strong {
     font-size: 0.85em;
     text-transform: uppercase;
-    text-align: center;
-    white-space: nowrap; /* Impedisce al nome di andare a capo */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Se il nome è troppo lungo, mette i puntini invece di uscire */
-    width: 100%;
     color: #fff;
+    /* Rimuoviamo il troncamento per evitare che i nomi sembrino tagliati male */
 }
 
 .p-deck {
@@ -237,16 +214,20 @@ summary {
     font-size: 0.7em;
     margin-top: 5px;
     font-style: italic;
-    white-space: nowrap;
 }
 
 .vs-divider {
-    padding: 0 8px;
+    padding: 0 10px;
     color: var(--accent-color);
     font-weight: bold;
     font-size: 0.8em;
-    flex-shrink: 0; /* Impedisce al VS di schiacciarsi */
 }
+
+/* --- EFFETTO SCALETTA --- */
+/* Aumentiamo l'altezza delle colonne man mano che avanziamo per distanziare i match */
+.bracket-column:nth-child(2) { margin-top: 20px; } /* Il Quartino */
+.bracket-column:nth-child(3) { margin-top: 0; }    /* Semifinali */
+.bracket-column:nth-child(4) { margin-top: 0; }    /* Finale */
 
 /* ================================================= */
 /* 7. RESET LINK (NOMI BIANCHI E MAZZI GRIGI)       */
@@ -328,4 +309,5 @@ summary {
 .btn-enter:hover { background: var(--gold); color: black !important; }
 
 footer { text-align: center; padding: 40px; font-size: 0.8em; color: var(--accent-color); }
+
 
