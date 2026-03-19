@@ -362,6 +362,12 @@ td {
 .social-icon-link.insta:hover { background: #E1306C; box-shadow: 0 0 20px #E1306C; }
 .social-icon-link.twitch:hover { background: #9146FF; box-shadow: 0 0 20px #9146FF; }
 .social-icon-link.youtube:hover { background: #FF0000; box-shadow: 0 0 20px #FF0000; }
+.social-icon-link.youtube-live:hover, 
+.social-icon-link.live:hover { 
+    background: #FF0000 !important; 
+    box-shadow: 0 0 20px #FF0000 !important; 
+    border-color: transparent !important; 
+    color: white !important;
 
 .btn-enter, .inner-button {
     display: inline-block;
