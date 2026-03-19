@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royalmist98 - Official Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Stili specifici per la Home Page per renderla epica */
+        .main-portal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .hero-logo {
+            width: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--gold);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .portal-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        /* Card speciale per la Locanda */
+        .locanda-gate {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.imgur.com/X2gqBaB.jpeg');
+            background-size: cover;
+            background-position: center;
+            border: 2px solid var(--gold) !important;
+        }
+
+        .social-gate {
+            background: rgba(20, 20, 20, 0.8);
+            border: 2px solid #9146FF !important; /* Colore Twitch */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-portal">
+        <div class="hero-section">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/584a4764-cdec-45b8-b26b-d2500895bf2c-profile_image-150x150.png" alt="Royalmist98 Logo" class="hero-logo">
+            <h1 style="font-size: 3em; letter-spacing: 8px;">ROYALMIST98</h1>
+            <p style="font-family: 'Orbitron'; color: var(--gold);">Content Creator | Duelist | Community Leader</p>
+        </div>
+
+        <div class="portal-container">
+            <a href="locanda.html" class="hub-card locanda-gate">
+                <span class="hub-icon">⚔️</span>
+                <h2 style="font-family: 'Cinzel';">ENTRA NELLA LOCANDA</h2>
+                <p>Accedi ai Tornei, alla Classifica "Il Re dei Giochi" e scopri le fazioni dei duellanti.</p>
+                <div class="inner-button">Vai alla Locanda</div>
+            </a>
+
+            <div class="hub-card social-gate">
+                <span class="hub-icon"><i class="fa-brands fa-twitch"></i></span>
+                <h2>SOCIAL HUB</h2>
+                <p>Segui le dirette su Twitch, guarda i video su YouTube e resta connesso su Instagram.</p>
+                
+                <div class="social-hub" style="margin-top: 15px; border-top: none; background: none;">
+                    <a href="https://www.twitch.tv/royalmist98" target="_blank" class="social-icon-link twitch"><i class="fa-brands fa-twitch"></i></a>
+                    <a href="https://www.youtube.com/@RoyalMist98" target="_blank" class="social-icon-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/royalmist98/" target="_blank" class="social-icon-link insta"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 40px; font-family: 'Orbitron'; font-size: 0.8em; color: #555;">
+        © 2026 ROYALMIST98 - ALL RIGHTS RESERVED
+    </footer>
+
+</body>
+</html>
