@@ -316,7 +316,7 @@ td {
 }
 
 /* ================================================= */
-/* 10. BOX INVITO E PULSANTI                        */
+/* 10. BOX INVITO E PULSANTI                         */
 /* ================================================= */
 .join-us-box {
     max-width: 1100px;
@@ -359,16 +359,21 @@ td {
     gap: 12px;
 }
 
+/* COLORI SOCIAL */
 .social-icon-link.insta:hover { background: #E1306C; box-shadow: 0 0 20px #E1306C; }
 .social-icon-link.twitch:hover { background: #9146FF; box-shadow: 0 0 20px #9146FF; }
 .social-icon-link.youtube:hover { background: #FF0000; box-shadow: 0 0 20px #FF0000; }
+
+/* FIX ROSSO LIVE (CORRETTO) */
 .social-icon-link.youtube-live:hover, 
 .social-icon-link.live:hover { 
     background: #FF0000 !important; 
     box-shadow: 0 0 20px #FF0000 !important; 
     border-color: transparent !important; 
     color: white !important;
+}
 
+/* PULSANTI AZIONE */
 .btn-enter, .inner-button {
     display: inline-block;
     padding: 12px 25px;
@@ -391,15 +396,9 @@ td {
     transform: translateY(-3px);
 }
 
-.back-button {
-    margin: 20px;
-}
-
 /* ================================================= */
-/* AGGIUNTE RECENTI (NAVIGAZIONE E SOCIAL FIX)       */
+/* 11. NAVIGAZIONE (HUB + LOCANDA)                   */
 /* ================================================= */
-
-/* 1. NAVIGAZIONE DOPPIA IN ALTO (HUB + LOCANDA) */
 .nav-secondary {
     display: flex;
     justify-content: center;
@@ -414,7 +413,7 @@ td {
     gap: 10px;
     padding: 10px 18px;
     background: rgba(0, 0, 0, 0.5);
-    border: 1px solid var(--gold);
+    border: 2px solid var(--gold);
     color: var(--gold) !important;
     text-decoration: none;
     font-family: 'Orbitron', sans-serif;
@@ -441,32 +440,4 @@ td {
     background: var(--accent-color);
     color: white !important;
     box-shadow: 0 0 15px var(--accent-color);
-}
-
-/* 2. FIX SOCIAL BOX (ANIMAZIONI RIPRISTINATE) */
-.social-icon-link {
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-}
-
-.social-icon-link:hover {
-    transform: translateY(-8px) scale(1.05) !important;
-}
-
-.social-icon-link i {
-    transition: transform 0.3s ease !important;
-}
-
-.social-icon-link:hover i {
-    transform: scale(1.2) rotate(5deg) !important;
-}
-
-/* 3. BOTTONI "ENTRA" PIÙ PROFESSIONALI */
-.btn-enter, .inner-button {
-    border-width: 2px !important;
-    transition: all 0.3s ease !important;
-}
-
-.btn-enter:hover, .inner-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px var(--gold) !important;
 }
