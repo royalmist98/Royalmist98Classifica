@@ -1,198 +1,524 @@
 /* ================================================= */
-/* 1. VARIABILI E SETUP                             */
+/* 1. VARIABILI E SETUP                             */
 /* ================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 
 :root {
-    --accent-color: #bf00ff; /* Viola Neon */
-    --gold: #ffcc00;         /* Oro Yu-Gi-Oh */
-    --dark-bg: rgba(10, 10, 10, 0.9);
+    --accent-color: #bf00ff; /* Viola Neon */
+    --gold: #ffcc00;         /* Oro Yu-Gi-Oh */
+    --dark-bg: rgba(10, 10, 10, 0.9);
 }
 
-* { box-sizing: border-box; } /* Evita che i bordi allarghino i box */
-
+/* ================================================= */
+/* 2. SFONDI DIFFERENZIATI (PC vs MOBILE)            */
+/* ================================================= */
 body {
-    font-family: 'Orbitron', sans-serif;
-    background-color: #000;
-    color: #e0e0e0;
-    margin: 0;
-    padding-top: 80px; /* Spazio per la Navbar fissa */
-    background-image: url('https://i.imgur.com/JtVVp9R.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    overflow-x: hidden;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.imgur.com/JtVVp9R.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    overflow-x: hidden;
 }
 
 @media (min-width: 1000px) {
-    body { background-image: url('https://i.imgur.com/VZBUPvK.png'); }
+    body {
+        background-image: url('https://i.imgur.com/VZBUPvK.png');
+    }
 }
 
 /* ================================================= */
-/* 2. NAVBAR PROFESSIONALE                          */
+/* 3. INFO-BOX (NASCOSTA)                           */
 /* ================================================= */
-.navbar {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 70px;
-    background: rgba(0, 0, 0, 0.95);
-    border-bottom: 2px solid var(--gold);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
+.info-box {
+    display: none !important; /* Abbiamo deciso di farla sparire */
 }
-
-.nav-container {
-    width: 90%; max-width: 1200px;
-    margin: 0 auto;
-    display: flex; justify-content: space-between; align-items: center;
-}
-
-.nav-logo {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.2rem;
-    color: var(--gold);
-    letter-spacing: 2px;
-}
-
-.menu-toggle {
-    background: none; border: none; color: var(--gold);
-    font-size: 1.5rem; cursor: pointer;
-}
-
-.nav-links {
-    position: absolute; top: 70px; right: 5%;
-    background: #000; border: 2px solid var(--gold);
-    list-style: none; padding: 20px; border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-    z-index: 10000;
-}
-
-.nav-links li { padding: 10px 0; border-bottom: 1px solid #222; }
-.nav-links a { 
-    color: white; text-decoration: none; 
-    display: flex; align-items: center; gap: 10px;
-}
-.nav-links a:hover { color: var(--gold); }
-.hidden { display: none; }
 
 /* ================================================= */
-/* 3. HERO SECTION (L'INIZIO PAGINA)                */
+/* 4. HEADER E LOGO                                 */
 /* ================================================= */
 header {
-    text-align: center;
-    padding: 60px 20px;
+    text-align: center;
+    padding: 40px 20px 10px 20px;
 }
 
-.main-avatar {
-    width: 130px;
-    height: 130px;
-    border: 3px solid var(--accent-color);
-    border-radius: 50%;
-    box-shadow: 0 0 20px var(--accent-color);
-    margin-bottom: 20px;
+.logo {
+    max-width: 120px;
+    border: 3px solid var(--accent-color);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--accent-color);
+    margin-bottom: 10px;
 }
 
 h1 {
-    font-family: 'Cinzel', serif;
-    color: var(--gold);
-    text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
-    margin: 10px 0;
-    font-size: 2.5em;
-}
-
-.brand-subtitle {
-    font-family: 'Orbitron';
-    letter-spacing: 4px;
-    color: #888;
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+    margin: 5px 0;
 }
 
 /* ================================================= */
-/* 4. GRID DELLE CARD (PORTALE)                     */
+/* 5. HUB (ICONE GRANDI + OMBRE)                     */
 /* ================================================= */
 #hub-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin: 40px auto;
-    max-width: 1200px;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    max-width: 1100px;
 }
 
 .hub-card {
-    background: rgba(20, 0, 40, 0.85);
-    border: 2px solid var(--accent-color);
-    padding: 40px 25px;
-    border-radius: 15px;
-    text-decoration: none;
-    color: white !important;
-    width: 350px; /* Più professionale e larga */
-    text-align: center;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: rgba(20, 0, 40, 0.85);
+    border: 2px solid var(--accent-color);
+    padding: 40px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white !important;
+    width: 280px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
 }
 
 .hub-card:hover {
-    transform: translateY(-15px);
-    border-color: var(--gold);
-    box-shadow: 0 15px 35px rgba(191, 0, 255, 0.4);
+    transform: translateY(-15px);
+    border-color: var(--gold);
+    box-shadow: 0 15px 35px rgba(191, 0, 255, 0.5), 0 0 15px rgba(255, 204, 0, 0.2);
 }
 
-.hub-icon { font-size: 4em; display: block; margin-bottom: 15px; color: var(--gold); }
-
-/* ================================================= */
-/* 5. ANIMAZIONI E PULSANTI                         */
-/* ================================================= */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
+.hub-icon { 
+    font-size: 6em; 
+    display: block; 
+    margin-bottom: 20px; 
+    transition: transform 0.3s ease;
 }
 
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.inner-button {
-    margin-top: 25px;
-    padding: 12px 20px;
-    border: 1px solid white;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-size: 0.8em;
-    transition: 0.3s;
-}
-
-.hub-card:hover .inner-button {
-    background-color: var(--gold);
-    color: black;
-    border-color: var(--gold);
+.hub-card:hover .hub-icon {
+    transform: scale(1.15);
 }
 
 /* ================================================= */
-/* 6. SOCIAL BOX (IN FONDO)                         */
+/* 6. TABELLONE TORNEO (STRUTTURA ORIGINALE)         */
+/* ================================================= */
+details {
+    background: rgba(10, 10, 10, 0.9);
+    border: 2px solid var(--gold);
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 1400px;
+    overflow: hidden;
+}
+
+summary {
+    padding: 20px;
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 1.3em;
+    cursor: pointer;
+    text-align: center;
+    list-style: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.bracket-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    padding: 40px 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.bracket-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    min-width: 260px;
+    height: 850px; 
+}
+
+.column-title {
+    color: var(--gold);
+    font-size: 0.85em;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.4);
+}
+
+.matchup-row {
+    background: rgba(5, 5, 5, 0.9);
+    border: 2px solid var(--accent-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    box-shadow: 0 0 10px rgba(191, 0, 255, 0.2);
+}
+
+.p-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+    background: #000;
+    min-width: 0;
+}
+
+.p-box strong {
+    color: #fff;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.p-deck {
+    color: #888;
+    font-size: 0.65em;
+    margin-top: 3px;
+    font-style: italic;
+}
+
+.vs-divider {
+    padding: 0 5px;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 0.7em;
+}
+
+/* ================================================= */
+/* 7. RESET LINK (NOMI BIANCHI)                     */
+/* ================================================= */
+.player-link {
+    color: white !important;
+    text-decoration: none !important;
+    transition: 0.3s;
+}
+
+.player-link:hover {
+    color: var(--accent-color) !important;
+    text-shadow: 0 0 8px var(--accent-color);
+}
+
+.deck-link {
+    color: #888 !important;
+    text-decoration: none !important;
+    transition: 0.3s;
+}
+
+.deck-link:hover {
+    color: #00d4ff !important;
+    text-shadow: 0 0 10px #00d4ff;
+}
+
+/* ================================================= */
+/* 8. PODIO (CLASSIFICA) - FIX DIMENSIONI           */
+/* ================================================= */
+.sezione-titolo {
+    text-align: center;
+    color: var(--gold);
+    margin-top: 50px;
+}
+
+#podio-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 380px; 
+    margin: 150px auto 50px; 
+    max-width: 900px;
+}
+
+.podio-blocco {
+    width: 30%;
+    position: relative;
+    border-radius: 8px 8px 0 0;
+}
+
+.first-place-podio { height: 100%; background: linear-gradient(to top, #ffd700, #9a7b0c); margin: 0 10px; }
+.second-place-podio { height: 70%; background: linear-gradient(to top, #c0c0c0, #708090); margin-right: 10px; }
+.third-place-podio { height: 45%; background: linear-gradient(to top, #cd7f32, #8b4513); margin-left: 10px; }
+
+.podio-info {
+    position: absolute;
+    top: -160px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px; /* Ripristina la dimensione corretta per le carte */
+    text-align: center;
+}
+
+.carta-preferita {
+    width: 100% !important;
+    height: auto !important;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* ================================================= */
+/* 9. TABELLA CLASSIFICA E CAMPIONE                 */
+/* ================================================= */
+table {
+    width: 95%;
+    max-width: 1000px;
+    margin: 80px auto 100px;
+    border-collapse: collapse;
+    background: rgba(10, 10, 10, 0.9);
+    border: 1px solid #444;
+}
+
+th {
+    background: #000;
+    color: var(--gold);
+    padding: 15px;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+.champion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.champion-box {
+    border: 2px solid var(--gold) !important;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+    min-width: 200px;
+}
+
+.crown {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    filter: drop-shadow(0 0 10px var(--gold));
+    text-align: center;
+}
+
+.btn-enter {
+    color: var(--gold) !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--gold);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-enter:hover { background: var(--gold); color: black !important; }
+
+@media (max-width: 1300px) {
+    .bracket-container { justify-content: flex-start; }
+}
+
+/* --- STILE COMING SOON EDISON --- */
+.coming-soon-container {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.coming-soon-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5em;
+    color: var(--gold);
+    letter-spacing: 8px;
+    text-shadow: 0 0 15px var(--gold);
+    margin-bottom: 20px;
+}
+
+.social-contact {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.social-link {
+    text-decoration: none !important;
+    color: white !important;
+    font-size: 1.3em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s ease;
+}
+
+/* Effetto Colore Instagram */
+.social-link.insta:hover {
+    color: #E1306C !important;
+    text-shadow: 0 0 10px #E1306C;
+}
+
+/* Effetto Colore Twitch */
+.social-link.twitch:hover {
+    color: #9146FF !important;
+    text-shadow: 0 0 10px #9146FF;
+}
+
+/* Animazione loghi al passaggio */
+.social-link:hover i {
+    transform: scale(1.3) rotate(5deg);
+}
+
+/* ================================================= */
+/* BOX INVITO (POSIZIONATO SOTTO L'HUB)             */
 /* ================================================= */
 .join-us-box {
-    max-width: 1100px;
-    margin: 100px auto !important;
-    padding: 40px;
-    background: rgba(10, 10, 10, 0.8);
-    border-top: 2px solid var(--gold);
-    text-align: center;
+    max-width: 1100px;
+    margin: 80px auto 100px !important;
+    padding: 40px;
+    background: rgba(10, 10, 10, 0.7); 
+    border-top: 2px solid var(--gold); 
+    text-align: center;
+    clear: both;
+}
+
+.join-text {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.contact-text {
+    color: #bbb;
+    font-size: 1em;
+    margin-bottom: 35px;
 }
 
 .social-hub {
-    display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .social-icon-link {
-    text-decoration: none !important; color: white !important;
-    padding: 12px 25px; background: rgba(255, 255, 255, 0.05);
-    border-radius: 5px; transition: 0.3s;
-    min-width: 160px; display: flex; align-items: center; gap: 10px;
+    text-decoration: none !important;
+    color: white !important;
+    font-size: 0.95em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Spazio tra logo e nome */
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    min-width: 180px; /* Rende i pulsanti più uniformi */
+    justify-content: center;
 }
 
-.social-icon-link.insta:hover { background: #E1306C; }
-.social-icon-link.twitch:hover { background: #9146FF; }
-.social-icon-link.youtube:hover { background: #FF0000; }
+.social-icon-link i {
+    font-size: 1.3em; /* Logo leggermente più grande del testo */
+}
+
+/* Colori al passaggio del mouse */
+.social-icon-link.insta:hover { background: #E1306C; box-shadow: 0 0 20px #E1306C; border-color: transparent; }
+.social-icon-link.twitch:hover { background: #9146FF; box-shadow: 0 0 20px #9146FF; border-color: transparent; }
+.social-icon-link.youtube:hover { background: #FF0000; box-shadow: 0 0 20px #FF0000; border-color: transparent; }
+.social-icon-link.youtube-live:hover { background: #CC0000; box-shadow: 0 0 20px #CC0000; border-color: transparent; }
+
+.social-icon-link:hover {
+    transform: translateY(-8px);
+    color: #fff !important;
+}
+
+/* STILE PER IL PULSANTE INTERNO ALLE CARD */
+.inner-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+/* EFFETTO GIALLO AL PASSAGGIO DEL MOUSE */
+.hub-card:hover .inner-button {
+    background-color: var(--gold);
+    color: black;
+    border-color: var(--gold);
+    box-shadow: 0 0 10px var(--gold);
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0; width: 100%; height: 60px;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid var(--gold);
+    z-index: 1000;
+}
+.nav-container {
+    display: flex; justify-content: space-between;
+    align-items: center; padding: 10px 5%;
+}
+.nav-links {
+    position: absolute; top: 60px; right: 5%;
+    background: black; border: 1px solid var(--gold);
+    list-style: none; padding: 20px;
+}
+.hidden { display: none; }
+
+/* FADE-IN ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CARDS PROFESSIONALI */
+.card-professional {
+    position: relative;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s;
+}
+.card-professional:hover { transform: scale(1.02); }
+
+.btn-pro {
+    display: inline-block;
+    padding: 12px 30px;
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    font-family: 'Orbitron';
+    margin-top: 20px;
+}
+.btn-pro:hover { background: var(--gold); color: black; }}
