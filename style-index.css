@@ -3,12 +3,15 @@
 :root {
     --accent-color: #bf00ff;
     --gold: #ffcc00;
+    /* Nuovo colore Neon Blu base ricavato dall'immagine */
+    --neon-blue: #00f2fe; 
 }
 
 body {
     margin: 0;
     padding: 0;
     background-color: #000;
+    /* Utilizzo Orbitron per tutto il body per coerenza */
     font-family: 'Orbitron', sans-serif;
     overflow: hidden;
 }
@@ -25,7 +28,7 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    filter: brightness(1.05) contrast(1.02); /* Leggera spinta di luce */
+    filter: brightness(1.05) contrast(1.02);
 }
 
 /* HOTSPOTS PULITI (NIENTE ILLUMINAZIONE) */
@@ -37,56 +40,77 @@ body {
     border: none !important;
 }
 
-/* ETICHETTE OLOGRAFICHE */
+/* ETICHETTE OLOGRAFICHE AGGIORNATE (STILE NEON BLU) */
 .label {
     position: absolute;
-    top: -20px;
+    /* Posizionate più in alto rispetto a prima */
+    top: -50px; 
     left: 50%;
     transform: translateX(-50%);
-    color: var(--gold);
-    font-size: 0.75rem;
+    
+    /* Colore testo bianco/azzurro chiarissimo al centro */
+    color: #fff; 
+    font-size: 0.8rem; /* Leggermente più grandi per leggibilità */
+    font-weight: 700;
     letter-spacing: 2px;
     white-space: nowrap;
-    text-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+    text-transform: uppercase;
+    
+    /* EFFETTO NEON BLU (Multi-livello text-shadow) */
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px var(--neon-blue),
+        0 0 20px var(--neon-blue),
+        0 0 35px var(--neon-blue),
+        0 0 40px var(--neon-blue),
+        0 0 50px var(--neon-blue);
+        
     pointer-events: none;
+    opacity: 0.9; /* Leggera trasparenza per realismo */
 }
 
-/* Sottolineatura sottile sotto l'etichetta */
+/* Sottolineatura sottile sotto l'etichetta (anch'essa Neon Blu) */
 .label::after {
     content: '';
     display: block;
-    width: 30px;
-    height: 1px;
-    background: var(--gold);
-    margin: 4px auto;
-    box-shadow: 0 0 5px var(--gold);
+    width: 40px;
+    height: 2px;
+    background: #fff;
+    margin: 8px auto 0;
+    border-radius: 2px;
+    /* Bagliore neon anche sulla linea */
+    box-shadow: 
+        0 0 5px #fff,
+        0 0 10px var(--neon-blue),
+        0 0 15px var(--neon-blue);
 }
 
-/* POSIZIONAMENTI (Regola questi % se necessario) */
+/* POSIZIONAMENTI (Percentuali invariate, solo l'etichetta sale) */
 .monitor-locanda { top: 15%; left: 10%; width: 20%; height: 30%; }
 .logo-linktree { top: 35%; left: 40%; width: 20%; height: 20%; }
 .pc-specs { top: 20%; right: 5%; width: 18%; height: 35%; }
 .card-maker { top: 70%; left: 10%; width: 25%; height: 20%; }
 
-/* POPUP SPECIFICHE */
+/* POPUP SPECIFICHE (Invariato) */
 .specs-content {
     position: absolute;
     top: 0;
     right: 110%;
     background: rgba(10, 10, 20, 0.95);
-    border: 1px solid var(--gold);
+    border: 1px solid var(--neon-blue); /* Bordo blu ora */
     padding: 20px;
     width: 280px;
     color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    box-shadow: 0 0 30px rgba(0, 242, 254, 0.5); /* Bagliore blu */
     z-index: 100;
 }
 
-.specs-content h3 { color: var(--gold); font-size: 1rem; margin-top: 0; }
+.specs-content h3 { color: #fff; text-shadow: 0 0 5px var(--neon-blue); font-size: 1rem; margin-top: 0; }
 .specs-content ul { list-style: none; padding: 0; font-size: 0.8rem; }
 .specs-content li { margin-bottom: 8px; border-bottom: 1px solid #333; }
-.specs-content strong { color: var(--accent-color); }
+.specs-content strong { color: var(--accent-color); } /* Manteniamo il viola per i titoli tecnici */
 
 .hidden { display: none !important; }
 
@@ -99,5 +123,5 @@ body {
         width: 85%;
         right: auto;
     }
-    .label { font-size: 0.5rem; top: -15px; }
+    .label { font-size: 0.6rem; top: -35px; } /* Regolazione mobile */
 }
