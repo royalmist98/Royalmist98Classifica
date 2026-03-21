@@ -1,18 +1,8 @@
-/* ================================================= */
-/* 1. SETUP CORE & VARIABILI                         */
-/* ================================================= */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Cinzel:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 :root {
-    --accent-color: #bf00ff; /* Viola Neon */
-    --gold: #ffcc00;         /* Oro Yu-Gi-Oh */
-    --cyan: #00d4ff;         /* Blu Monitor */
-    --dark-overlay: rgba(0, 0, 0, 0.7);
-}
-
-* {
-    box-sizing: border-box;
-    cursor: default; /* Reset cursore per gli elementi non cliccabili */
+    --accent-color: #bf00ff;
+    --gold: #ffcc00;
 }
 
 body {
@@ -20,156 +10,94 @@ body {
     padding: 0;
     background-color: #000;
     font-family: 'Orbitron', sans-serif;
-    color: white;
-    overflow-x: hidden; /* Evita scroll orizzontale */
+    overflow: hidden;
 }
 
-/* ================================================= */
-/* 2. NAVBAR (TOP MENU)                              */
-/* ================================================= */
-.navbar {
-    position: fixed;
-    top: 0;
+.command-center {
+    position: relative;
     width: 100%;
-    z-index: 1000;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
-    padding: 15px 30px;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
+    max-width: 1920px;
     margin: 0 auto;
 }
 
-.nav-logo {
-    font-family: 'Cinzel', serif;
-    color: var(--gold);
-    letter-spacing: 2px;
-    font-size: 1.2rem;
-    text-shadow: 0 0 10px var(--gold);
-}
-
-.menu-toggle {
-    background: transparent;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.menu-toggle:hover {
-    background: var(--accent-color);
-    color: white;
-    box-shadow: 0 0 15px var(--accent-color);
-}
-
-.nav-links {
-    position: absolute;
-    top: 70px;
-    right: 30px;
-    background: rgba(10, 0, 20, 0.95);
-    border: 1px solid var(--accent-color);
-    list-style: none;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.nav-links li {
-    margin: 15px 0;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.nav-links a:hover {
-    color: var(--gold);
-    transform: translateX(5px);
-}
-
-/* ================================================= */
-/* 3. COMMAND CENTER (IMAGE MAP)                     */
-/* ================================================= */
-.command-center {
-    animation: fadeIn 1.5s ease-out;
-}
-
+/* REALISMO IMMAGINE */
 .bg-image {
-    filter: brightness(0.8) contrast(1.1);
-    transition: filter 0.5s ease;
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(1.05) contrast(1.02); /* Leggera spinta di luce */
 }
 
-/* Quando si interagisce con il PC o il Monitor, l'immagine si schiarisce */
-.command-center:has(.hotspot:hover) .bg-image {
-    filter: brightness(1) contrast(1.1);
+/* HOTSPOTS PULITI (NIENTE ILLUMINAZIONE) */
+.hotspot {
+    position: absolute;
+    cursor: pointer;
+    text-decoration: none;
+    background: transparent !important;
+    border: none !important;
 }
 
-/* ================================================= */
-/* 4. ANIMAZIONI & EFFETTI                           */
-/* ================================================= */
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(1.05); }
-    to { opacity: 1; transform: scale(1); }
+/* ETICHETTE OLOGRAFICHE */
+.label {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gold);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+    pointer-events: none;
 }
 
-/* Effetto di scansione sugli Hotspot */
-.hotspot:hover {
-    /* Bagliore di scansione hi-tech */
-    background: radial-gradient(circle, rgba(191, 0, 255, 0.1) 0%, transparent 70%);
+/* Sottolineatura sottile sotto l'etichetta */
+.label::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: var(--gold);
+    margin: 4px auto;
+    box-shadow: 0 0 5px var(--gold);
 }
 
-/* Stile specifico per il PC (Oro) */
-.pc-specs:hover {
-    border: 1px solid var(--gold) !important;
-    box-shadow: 0 0 30px rgba(255, 204, 0, 0.2);
+/* POSIZIONAMENTI (Regola questi % se necessario) */
+.monitor-locanda { top: 15%; left: 10%; width: 20%; height: 30%; }
+.logo-linktree { top: 35%; left: 40%; width: 20%; height: 20%; }
+.pc-specs { top: 20%; right: 5%; width: 18%; height: 35%; }
+.card-maker { top: 70%; left: 10%; width: 25%; height: 20%; }
+
+/* POPUP SPECIFICHE */
+.specs-content {
+    position: absolute;
+    top: 0;
+    right: 110%;
+    background: rgba(10, 10, 20, 0.95);
+    border: 1px solid var(--gold);
+    padding: 20px;
+    width: 280px;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    z-index: 100;
 }
 
-/* Stile specifico per il Monitor (Cyan) */
-.monitor-locanda:hover {
-    border: 1px solid var(--cyan) !important;
-    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
-}
+.specs-content h3 { color: var(--gold); font-size: 1rem; margin-top: 0; }
+.specs-content ul { list-style: none; padding: 0; font-size: 0.8rem; }
+.specs-content li { margin-bottom: 8px; border-bottom: 1px solid #333; }
+.specs-content strong { color: var(--accent-color); }
 
-/* Stile specifico per il Logo centrale (Viola) */
-.logo-linktree:hover {
-    border: 1px solid var(--accent-color) !important;
-    box-shadow: 0 0 40px rgba(191, 0, 255, 0.4);
-}
+.hidden { display: none !important; }
 
-/* ================================================= */
-/* 5. RESPONSIVE FIX                                 */
-/* ================================================= */
-
-/* Nasconde il popup su schermi molto piccoli per evitare bug visivi */
+/* Responsive per Mobile */
 @media (max-width: 768px) {
     .specs-content {
         position: fixed;
-        top: 50% !important;
-        left: 50% !important;
-        right: auto !important;
-        transform: translate(-50%, -50%) !important;
-        width: 90% !important;
-        border-radius: 15px !important;
-        pointer-events: auto;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85%;
+        right: auto;
     }
-    
-    .nav-logo { font-size: 0.9rem; }
-}
-
-.hidden {
-    display: none !important;
+    .label { font-size: 0.5rem; top: -15px; }
 }
