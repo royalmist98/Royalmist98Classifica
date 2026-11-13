@@ -6,9 +6,7 @@
     <title>Tornei - Duelist Hub</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Cinzel&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -20,6 +18,7 @@
 
     <div class="tornei-archive" style="padding: 20px;">
 
+        <!-- TORNEO 1: GENESYS GENNAIO 2026 -->
         <details open>
             <summary>TORNEO GENESYS GENNAIO 2026</summary>
             
@@ -147,153 +146,175 @@
                     </div>
                 </div>
 
-<details>
-    <summary>TORNEO EDISON NOVEMBRE 2026</summary>
-    <div class="tournament-container">
-        
-        <div class="tournament-info">
-            <p><strong>Formato:</strong> Edison (Girone all'italiana - 6 Giocatori)</p>
-            <p><strong>Esito:</strong> Pari merito in vetta a 4 giocatori (2W - 1L). Classifica ordinata per differenza game.</p>
-        </div>
+            </div> <!-- Chiusura bracket-container -->
+        </details> <!-- Chiusura primo torneo -->
 
-        <!-- TABELLA CLASSIFICA FINALE -->
-        <h4>Classifica Finale</h4>
-        <table class="tournament-table">
-            <thead>
-                <tr>
-                    <th>Pos.</th>
-                    <th>Giocatore</th>
-                    <th>Deck</th>
-                    <th>Record (W-L)</th>
-                    <th>Game (V-P)</th>
-                    <th>Lista</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="top-rank">
-                    <td>1° (Pari)</td>
-                    <td><strong>Macro</strong></td>
-                    <td>Six Samurai</td>
-                    <td>2 - 1</td>
-                    <td>5 - 2 (+3)</td>
-                    <td><a href="#" target="_blank" class="deck-link">Decklist</a></td>
-                </tr>
-                <tr class="top-rank">
-                    <td>2° (Pari)</td>
-                    <td><strong>Star</strong></td>
-                    <td>Quick Monarch</td>
-                    <td>2 - 1</td>
-                    <td>4 - 3 (+1)</td>
-                    <td><a href="#" target="_blank" class="deck-link">Decklist</a></td>
-                </tr>
-                <tr class="top-rank">
-                    <td>2° (Pari)</td>
-                    <td><strong>Yugari</strong></td>
-                    <td>Alanera</td>
-                    <td>2 - 1</td>
-                    <td>4 - 3 (+1)</td>
-                    <td><a href="#" target="_blank" class="deck-link">Decklist</a></td>
-                </tr>
-                <tr class="top-rank">
-                    <td>4° (Pari)</td>
-                    <td><strong>UTH</strong></td>
-                    <td>Endymion</td>
-                    <td>2 - 1</td>
-                    <td>4 - 4 (0)</td>
-                    <td><a href="#" target="_blank" class="deck-link">Decklist</a></td>
-                </tr>
-                <tr>
-                    <td>5°</td>
-                    <td><strong>Edo</strong></td>
-                    <td>Sciabola-X</td>
-                    <td>1 - 2</td>
-                    <td>2 - 5 (-3)</td>
-                    <td><a href="#" target="_blank" class="deck-link">Decklist</a></td>
-                </tr>
-                <tr>
-                    <td>5°</td>
-                    <td><strong>Vinmarco</strong></td>
-                    <td>Fedele della Luce</td>
-                    <td>1 - 2</td>
-                    <td>2 - 5 (-3)</td>
-                    <td><a href="#" target="_blank" class="deck-link">Decklist</a></td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- TORNEO 2: EDISON NOVEMBRE 2026 -->
+        <details open>
+            <summary>TORNEO EDISON NOVEMBRE 2026</summary>
+            
+            <div class="bracket-container">
 
-        <!-- DETTAGLIO TURNI / RISULTATI INTERMEDI -->
-        <h4>Risultati dei Gironi</h4>
-        
-        <div class="rounds-wrapper">
-            <!-- TURNO 1 -->
-            <div class="round-box">
-                <h5>Turno 1</h5>
-                <ul class="match-list">
-                    <li>
-                        <span>Star <small>(Quick Monarch)</small> vs <strong>Macro</strong> <small>(Six Samurai)</small></span>
-                        <span class="score">0 - 2</span>
-                    </li>
-                    <li>
-                        <span>Yugari <small>(Alanera)</small> vs <strong>Vinmarco</strong> <small>(Fedele della Luce)</small></span>
-                        <span class="score">1 - 2</span>
-                    </li>
-                    <li>
-                        <span>UTH <small>(Endymion)</small> vs <strong>Edo</strong> <small>(Sciabola-X)</small></span>
-                        <span class="score">1 - 2</span>
-                    </li>
-                </ul>
+                <!-- COLONNA TURNO 1 -->
+                <div class="bracket-column">
+                    <h2 class="column-title">TURNO 1</h2>
+
+                    <div class="matchup-row">
+                        <div class="p-box">
+                            <strong>Star</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Quick Monarch</a></span>
+                        </div>
+                        <div class="vs-divider">0 - 2</div>
+                        <div class="p-box">
+                            <strong>Macro</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Six Samurai</a></span>
+                        </div>
+                    </div>
+
+                    <div class="matchup-row">
+                        <div class="p-box">
+                            <strong>Yugari</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Alanera</a></span>
+                        </div>
+                        <div class="vs-divider">1 - 2</div>
+                        <div class="p-box">
+                            <strong>VinMarco</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Fedele della Luce</a></span>
+                        </div>
+                    </div>
+
+                    <div class="matchup-row">
+                        <div class="p-box">
+                            <strong>UTH</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Endymion</a></span>
+                        </div>
+                        <div class="vs-divider">1 - 2</div>
+                        <div class="p-box">
+                            <strong>Edo</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Sciabola-X</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLONNA TURNO 2 -->
+                <div class="bracket-column">
+                    <h2 class="column-title">TURNO 2</h2>
+
+                    <div class="matchup-row">
+                        <div class="p-box">
+                            <strong>Macro</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Six Samurai</a></span>
+                        </div>
+                        <div class="vs-divider">2 - 0</div>
+                        <div class="p-box">
+                            <strong>VinMarco</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Fedele della Luce</a></span>
+                        </div>
+                    </div>
+
+                    <div class="matchup-row">
+                        <div class="p-box">
+                            <strong>Yugari</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Alanera</a></span>
+                        </div>
+                        <div class="vs-divider">2 - 0</div>
+                        <div class="p-box">
+                            <strong>Edo</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Sciabola-X</a></span>
+                        </div>
+                    </div>
+
+                    <div class="matchup-row">
+                        <div class="p-box">
+                            <strong>Star</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Quick Monarch</a></span>
+                        </div>
+                        <div class="vs-divider">2 - 1</div>
+                        <div class="p-box">
+                            <strong>UTH</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Endymion</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLONNA TURNO 3 -->
+                <div class="bracket-column">
+                    <h2 class="column-title">TURNO 3</h2>
+
+                    <div class="matchup-row">
+                        <div class="p-box">
+                            <strong>Star</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Quick Monarch</a></span>
+                        </div>
+                        <div class="vs-divider">2 - 0</div>
+                        <div class="p-box">
+                            <strong>Edo</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Sciabola-X</a></span>
+                        </div>
+                    </div>
+
+                    <div class="matchup-row">
+                        <div class="p-box">
+                            <strong>Macro</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Six Samurai</a></span>
+                        </div>
+                        <div class="vs-divider">1 - 2</div>
+                        <div class="p-box">
+                            <strong>Yugari</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Alanera</a></span>
+                        </div>
+                    </div>
+
+                    <div class="matchup-row">
+                        <div class="p-box">
+                            <strong>UTH</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Endymion</a></span>
+                        </div>
+                        <div class="vs-divider">2 - 0 (FF)</div>
+                        <div class="p-box">
+                            <strong>VinMarco</strong>
+                            <span class="p-deck"><a href="#" target="_blank" class="deck-link">Fedele della Luce</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLONNA CLASSIFICA FINALE -->
+                <div class="bracket-column">
+                    <h2 class="column-title">CLASSIFICA (W-L)</h2>
+                    
+                    <div class="champion-container">
+                        <div class="crown">🤝</div>
+                        <div class="p-box champion-box">
+                            <strong>PARI MERITO (2 - 1)</strong>
+                            <span class="p-deck">Macro (Six Samurai)</span>
+                            <span class="p-deck">Star (Quick Monarch)</span>
+                            <span class="p-deck">Yugari (Alanera)</span>
+                            <span class="p-deck">UTH (Endymion)</span>
+                        </div>
+                    </div>
+
+                    <div class="matchup-row" style="margin-top: 15px;">
+                        <div class="p-box">
+                            <strong>5° Posto (1 - 2)</strong>
+                            <span class="p-deck">Edo (Sciabola-X)</span>
+                            <span class="p-deck">VinMarco (Fedele della Luce)</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-
-            <!-- TURNO 2 -->
-            <div class="round-box">
-                <h5>Turno 2</h5>
-                <ul class="match-list">
-                    <li>
-                        <span><strong>Macro</strong> <small>(Six Samurai)</small> vs Vinmarco <small>(Fedele della Luce)</small></span>
-                        <span class="score">2 - 0</span>
-                    </li>
-                    <li>
-                        <span><strong>Yugari</strong> <small>(Alanera)</small> vs Edo <small>(Sciabola-X)</small></span>
-                        <span class="score">2 - 0</span>
-                    </li>
-                    <li>
-                        <span><strong>Star</strong> <small>(Quick Monarch)</small> vs UTH <small>(Endymion)</small></span>
-                        <span class="score">2 - 1</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- TURNO 3 -->
-            <div class="round-box">
-                <h5>Turno 3</h5>
-                <ul class="match-list">
-                    <li>
-                        <span><strong>Star</strong> <small>(Quick Monarch)</small> vs Edo <small>(Sciabola-X)</small></span>
-                        <span class="score">2 - 0</span>
-                    </li>
-                    <li>
-                        <span>Macro <small>(Six Samurai)</small> vs <strong>Yugari</strong> <small>(Alanera)</small></span>
-                        <span class="score">1 - 2</span>
-                    </li>
-                    <li>
-                        <span><strong>UTH</strong> <small>(Endymion)</small> vs Vinmarco <small>(Fedele della Luce)</small></span>
-                        <span class="score">2 - 0 <small>(Ritiro)</small></span>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        </details>
 
     </div>
-</details>
 
     <div class="nav-secondary">
-    <a href="index.html" class="btn-nav">
-        <i class="fas fa-home"></i> Hub Principale
-    </a>
-    <a href="locanda.html" class="btn-nav">
-        <i class="fas fa-chess-rook"></i> La Locanda
-    </a>
-</div>
+        <a href="index.html" class="btn-nav">
+            <i class="fas fa-home"></i> Hub Principale
+        </a>
+        <a href="locanda.html" class="btn-nav">
+            <i class="fas fa-chess-rook"></i> La Locanda
+        </a>
+    </div>
 
 </body>
 </html>
