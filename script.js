@@ -6,11 +6,11 @@
 const segnapostoCarta = "https://i.imgur.com/u5jS5xU.png"; 
 
 const contendenti = [
-    { nome: "Star", vittorie: 8, sconfitte: 2, cartaPreferita: "https://m.media-amazon.com/images/I/512aUpC7s9L.jpg" },
+    { nome: "Star", vittorie: 10, sconfitte: 3, cartaPreferita: "https://m.media-amazon.com/images/I/512aUpC7s9L.jpg" },
     { nome: "Macro", vittorie: 5, sconfitte: 3, cartaPreferita: "https://m.media-amazon.com/images/I/41Vtj-amFQL._AC_UF1000,1000_QL80_.jpg" },
     { nome: "VinMarco", vittorie: 4, sconfitte: 6, cartaPreferita: "https://www.magicianscircle.it/wp-content/uploads/2021/06/71qvnDNE-rL._AC_SY550_.jpg" },
     { nome: "Powerox", vittorie: 0, sconfitte: 1, cartaPreferita: "https://www.cardtrader.com/uploads/blueprints/image/80097/show_cyber-end-dragon-ultimate-rare-cybernetic-revolution.jpg" },
-    { nome: "Il Leone di Vibo", vittorie: 1, sconfitte: 1, cartaPreferita: segnapostoCarta },
+    { nome: "Il Leone di Vibo", vittorie: 2, sconfitte: 3, cartaPreferita: segnapostoCarta },
     { nome: "UTH", vittorie: 4, sconfitte: 4, cartaPreferita: "https://i.ebayimg.com/images/g/N9oAAOSwD0lUfRDl/s-l400.jpg" },
     { nome: "Bomberman", vittorie: 2, sconfitte: 2, cartaPreferita: segnapostoCarta },
     { nome: "Lepreviverna", vittorie: 0, sconfitte: 0, cartaPreferita: "https://m.media-amazon.com/images/I/71pOTYKXjhL.jpg" },
@@ -18,7 +18,7 @@ const contendenti = [
     { nome: "SubatomicFox", vittorie: 0, sconfitte: 2, cartaPreferita: segnapostoCarta },
     { nome: "Sif", vittorie: 0, sconfitte: 1, cartaPreferita: segnapostoCarta },
     { nome: "Rinkasho", vittorie: 0, sconfitte: 1, cartaPreferita: segnapostoCarta },
-    { nome: "Yugari", vittorie: 5, sconfitte: 3, cartaPreferita: segnapostoCarta },
+    { nome: "Yugari", vittorie: 7, sconfitte: 6, cartaPreferita: segnapostoCarta },
     { nome: "Edo", vittorie: 2, sconfitte: 5, cartaPreferita: segnapostoCarta }
 ];
 
