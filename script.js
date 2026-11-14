@@ -14,7 +14,7 @@ const contendenti = [
     { nome: "UTH", vittorie: 4, sconfitte: 4, cartaPreferita: "https://i.ebayimg.com/images/g/N9oAAOSwD0lUfRDl/s-l400.jpg" },
     { nome: "Bomberman", vittorie: 2, sconfitte: 2, cartaPreferita: segnapostoCarta },
     { nome: "Lepreviverna", vittorie: 0, sconfitte: 0, cartaPreferita: "https://m.media-amazon.com/images/I/71pOTYKXjhL.jpg" },
-    { nome: "PugNGlease", vittorie: 2, sconfitte: 1, cartaPreferita: "https://imgur.com/a/v5LrL0R" },
+    { nome: "PugNGlease", vittorie: 2, sconfitte: 1, cartaPreferita: "https://www.db.yugioh-card.com/yugiohdb/get_image.action?type=1&osplang=1&cid=16048&ciid=1&enc=CJBLtp1l52kf9roExfXopA&app=tournament&request_locale=it" },
     { nome: "SubatomicFox", vittorie: 0, sconfitte: 2, cartaPreferita: segnapostoCarta },
     { nome: "Sif", vittorie: 0, sconfitte: 1, cartaPreferita: segnapostoCarta },
     { nome: "Rinkasho", vittorie: 0, sconfitte: 1, cartaPreferita: segnapostoCarta },
